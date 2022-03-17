@@ -1,5 +1,8 @@
 import Nav from '../components/Navbar/Nav'
+import { Link } from "react-router-dom"
 import { IoIosArrowDown } from 'react-icons/io'
+import { GiTreeBranch } from 'react-icons/gi'
+
 import "./Home.scss"
 const Home = () => {
     return (
@@ -23,8 +26,19 @@ const Home = () => {
 
                 </div>
             </section>
-            <section id="info">
-
+            <section id="introduction">
+                <div className="introduction-img">
+                    {/* <img src="welcome-img.jpg" alt="" /> */}
+                </div>
+                <div className="introduction-text">
+                    <GiTreeBranch className='introduction-icon' />
+                    <h1>Poznajmy się</h1>
+                    <h5>
+                        Jestem Dyplomowanym Dietetykiem Klinicznym. Ukończyłam studia wyższe na Śląskim Uniwersytecie Medycznym w Katowicach. Kocham gotować i próbować nowych smaków. Mój blog powstał z myślą o tych, którzy szukają ciekawostek z dietetycznego świata oraz inspirujących przepisów na co dzień.
+                        Miło mi Cię poznać!
+                    </h5>
+                    <Link to="/about"><button className='introduction-btn'>Więcej o mnie</button></Link>
+                </div>
             </section>
         </>
     );

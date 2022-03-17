@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { VscMenu } from "react-icons/vsc"
 import { BsFacebook, BsInstagram } from "react-icons/bs"
-
+import{AiOutlineClose} from "react-icons/ai"
 import Sidebar from "../Sidebar/Sidebar"
 
 import "./Nav.scss";
@@ -15,7 +15,7 @@ const Nav = () => {
         setShowSidebar(!showSidebar)
     }
     const checkWindowSize = () => {
-        if (window.innerWidth < 760) {
+        if (window.innerWidth <= 760) {
             setShowBurger(false)
         }
         else {
@@ -40,7 +40,12 @@ const Nav = () => {
                         <li><Link to="/offer" className="navigation-link">Oferta</Link></li>
                         <li><Link to="/contact" className="navigation-link">Kontakt</Link></li>
                     </ul>) :
-                    (<VscMenu className='hamburger' onClick={burgerClick} />)}
+                    (
+                    <>
+                    {!showSidebar ? (<VscMenu className='hamburger' onClick={burgerClick} />) : (<AiOutlineClose className='hamburger' onClick={burgerClick}/>) }
+                        
+                    </>)
+                    }
             </div>
         </nav>
         <div className={showSidebar ? "sidebar active" : "sidebar"}>
