@@ -6,6 +6,21 @@ body {
 
 }
 
+h3 {
+    font-size: 20px;
+    color: #f06f33;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 55px;
+
+}
+
+p {
+    font-size: 20px;
+}
+
 #welcome {
     width: 100%;
     height: calc(100vh + 100px);
@@ -32,20 +47,7 @@ body {
                 margin: 30px auto 0 auto;
             }
 
-            h3 {
-                font-size: 20px;
-                color: #f06f33;
-                text-transform: uppercase;
-            }
 
-            h1 {
-                font-size: 55px;
-
-            }
-
-            p {
-                font-size: 20px;
-            }
         }
 
     }
@@ -59,7 +61,7 @@ body {
         img {
             position: absolute;
             width: auto;
-            height: 600px;
+            max-height: 600px;
             -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
             -moz-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
             box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
@@ -77,4 +79,110 @@ body {
 
         }
     }
+}
+
+
+
+
+
+
+
+
+
+
+//===============================
+@media screen and(max-width: 960px) {
+    .welcome-img-wrapper {
+        img {
+            width: 20px;
+            height: 500px;
+        }
+    }
+
+    .welcome-text-wrapper {
+
+        .welcome-text {
+            align-items: center;
+
+            h3 {
+                font-size: 15px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+}
+
+@media screen and(max-width: 750px) {
+
+    #welcome {
+        flex-direction: column;
+        height: calc(100vh + 100px);
+
+        .welcome-text-wrapper {
+            width: 100%;
+            height: 50%;
+            align-items: center;
+            margin-top: 100px;
+
+            .welcome-text {
+                width: 100%;
+                height: 300px;
+                justify-content: space-evenly;
+
+                .arrow-down {
+                    margin: 0;
+                }
+            }
+        }
+
+        .welcome-img-wrapper {
+            width: 100%;
+            height: 50%;
+
+            img {
+                height: 450px;
+            }
+
+            .welcome-img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .welcome-img-half {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 375px) {
+
+    #welcome {
+        .welcome-text-wrapper {
+            height: 100%;
+
+            .welcome-text {
+                width: 90%;
+                text-align: center;
+
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+
+        .welcome-img-wrapper {
+            height: 100%;
+
+            img {
+                height: 300px;
+            }
+        }
+    }
+
 }

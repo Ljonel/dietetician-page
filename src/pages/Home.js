@@ -23,6 +23,9 @@ const Home = () => {
 
                 </div>
             </section>
+            <section id="info">
+
+            </section>
         </>
     );
 }
