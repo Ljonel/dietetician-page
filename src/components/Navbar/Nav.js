@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 import { VscMenu } from "react-icons/vsc"
+import { BsFacebook, BsInstagram } from "react-icons/bs"
+
+import Sidebar from "../Sidebar/Sidebar"
+
 import "./Nav.scss";
 const Nav = () => {
 
@@ -11,11 +15,12 @@ const Nav = () => {
         setShowSidebar(!showSidebar)
     }
     const checkWindowSize = () => {
-        if (window.innerWidth < 960) {
+        if (window.innerWidth < 760) {
             setShowBurger(false)
         }
         else {
             setShowBurger(true)
+            setShowSidebar(false)
         }
     }
 
@@ -39,7 +44,29 @@ const Nav = () => {
             </div>
         </nav>
         <div className={showSidebar ? "sidebar active" : "sidebar"}>
+            <ul className="sidebar-menu">
+                {Sidebar.map((item, index) => (
+                    <li key={index} className={item.cname}>
 
+                        <Link to={item.path}>{item.icon}{item.title}</Link>
+                    </li>
+                ))}
+            </ul>
+            <div className="sidebar-socials">
+                <ul>
+                    <li className="sidebar-socials">
+                        <a href="www.youtube.com">
+                            <BsFacebook />
+                        </a>
+                        <a href="www.youtube.com">
+                            <BsInstagram />
+                        </a>
+                        <a href="www.youtube.com">
+                            <BsFacebook />
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </>
     );

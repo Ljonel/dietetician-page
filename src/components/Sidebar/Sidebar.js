@@ -1,5 +1,4 @@
 import react from "react"
-import "./Sidebar.scss";
 import React from "react";
 import { AiOutlineHome, AiOutlineMail } from 'react-icons/ai'
 import { SiAboutdotme } from 'react-icons/si'
@@ -13,19 +12,19 @@ const Sidebar = [
     },
     {
         title: 'O mnie',
-        path: '/',
+        path: '/about',
         icon: <SiAboutdotme className="sidebar-icons" />,
         cname: 'sidebar-text'
     },
     {
-        title: 'Usługi',
-        path: '/',
+        title: 'Oferta',
+        path: '/offer',
         icon: <MdOutlineHomeRepairService className="sidebar-icons" />,
         cname: 'sidebar-text'
     },
     {
         title: 'Kontakt',
-        path: '/',
+        path: '/contact',
         icon: <AiOutlineMail className="sidebar-icons" />,
         cname: 'sidebar-text'
     },
