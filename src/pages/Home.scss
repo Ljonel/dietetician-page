@@ -21,9 +21,14 @@ p {
     font-size: 20px;
 }
 
+#info {
+    height: 100vh;
+}
+
 #welcome {
     width: 100%;
-    height: calc(100vh + 100px);
+
+    // height: calc(100vh + 100px);
     display: flex;
     color: #272725;
 
@@ -60,6 +65,7 @@ p {
 
         img {
             position: absolute;
+            z-index: 1;
             width: auto;
             max-height: 600px;
             -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);

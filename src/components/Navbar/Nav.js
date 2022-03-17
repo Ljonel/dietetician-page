@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
-import { GiHamburgerMenu } from "react-icons/gi"
+import { VscMenu } from "react-icons/vsc"
 import "./Nav.scss";
 const Nav = () => {
 
     const [showBurger, setShowBurger] = useState(true);
-    const [handleBurgerClick, setHandleBurgerClick] = useState();
+    const [showSidebar, setShowSidebar] = useState(false);
 
     const burgerClick = () => {
-        console.log("burger")
+        setShowSidebar(!showSidebar)
     }
     const checkWindowSize = () => {
         if (window.innerWidth < 960) {
@@ -24,9 +24,9 @@ const Nav = () => {
     }, [])
     window.addEventListener('resize', checkWindowSize);
 
-    return (
+    return (<>
         <nav>
-            <div className="logo">Joanna Stopka</div>
+            <div className="logo">{showBurger ? (<Link to="/">Joanna Stopka</Link>) : (<Link to="/">JS</Link>)}</div>
             <div className="navigation">
                 {showBurger ?
                     (<ul>
@@ -35,10 +35,13 @@ const Nav = () => {
                         <li><Link to="/offer" className="navigation-link">Oferta</Link></li>
                         <li><Link to="/contact" className="navigation-link">Kontakt</Link></li>
                     </ul>) :
-                    (<GiHamburgerMenu className='hamburger' onClick={burgerClick} />)}
-
+                    (<VscMenu className='hamburger' onClick={burgerClick} />)}
             </div>
         </nav>
+        <div className={showSidebar ? "sidebar active" : "sidebar"}>
+
+        </div>
+    </>
     );
 }
 
