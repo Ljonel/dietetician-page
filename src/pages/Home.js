@@ -4,6 +4,7 @@ import WelcomeSection from '../components/Home/WelcomeSection'
 import IntroductionSection from '../components/Home/IntroductionSection'
 import TrainingSection from "../components/Home/TrainingSection"
 import CardsSection from "../components/Home/CardsSection"
+import Footer from "../components/Home/Footer"
 import { motion } from 'framer-motion'
 import { headerAnimation, imageAnimation, textAnimation, box, reveal, revealReverse, fromDown } from "../components/Animation"
 import { useScroll } from "../components/useScroll";
@@ -16,6 +17,7 @@ const Home = () => {
             <Nav />
             <WelcomeSection />
             <IntroductionSection />
+            <TrainingSection />
             <section id="gauge">
                 <div className="gauge-el">
                     <CountUp end={34} redraw={true}>
@@ -47,8 +49,8 @@ const Home = () => {
                     <h3>Klienci</h3>
                 </div>
             </section>
-            <TrainingSection />
             <CardsSection />
+            <Footer />
         </>
     );
 }

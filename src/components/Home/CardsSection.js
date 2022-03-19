@@ -38,7 +38,7 @@ const CardsSection = () => {
         <>
             <section id="cards-offer" ref={element}>
                 {cards.map((card, index) => (
-                    <motion.div animate={controls} variants={card.animate} transition={{ delay: 0.2, type: "tween" }} key={index} className="card" >
+                    <motion.div animate={controls} variants={card.animate} transition={{ delay: 0.1, type: "tween" }} key={index} className="card" >
                         <div className="card-title">
                             <motion.img whileHover={{ scale: 1.2 }} src={card.img} alt="" className='card-img' />
                             <motion.h3 >{card.title}</motion.h3>

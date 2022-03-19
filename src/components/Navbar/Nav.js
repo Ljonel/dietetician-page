@@ -31,7 +31,7 @@ const Nav = () => {
 
     return (<>
         <nav>
-            <div className="logo">{showBurger ? (<Link to="/">Joanna Stopka</Link>) : (<Link to="/">JS</Link>)}</div>
+            <div className="logo">{showBurger ? (<Link to="/" className='logo-text'>Joanna Stopka</Link>) : (<Link to="/" className='logo-text'>JS</Link>)}</div>
             <div className="navigation">
                 {showBurger ?
                     (<ul>
