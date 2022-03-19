@@ -5,9 +5,6 @@ import IntroductionSection from '../components/Home/IntroductionSection'
 import TrainingSection from "../components/Home/TrainingSection"
 import CardsSection from "../components/Home/CardsSection"
 import Footer from "../components/Home/Footer"
-import { motion } from 'framer-motion'
-import { headerAnimation, imageAnimation, textAnimation, box, reveal, revealReverse, fromDown } from "../components/Animation"
-import { useScroll } from "../components/useScroll";
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 import "./Home.scss"

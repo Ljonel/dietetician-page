@@ -29,6 +29,7 @@ nav {
         color: black;
         width: 100%;
         position: absolute;
+        padding-left: 10px;
     }
 }
 
@@ -182,6 +183,8 @@ nav {
         display: flex;
         justify-content: right;
         margin-right: 30px;
+
+        .logo-text {}
     }
 
     .navigation {
