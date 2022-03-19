@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
 
 body {
     font-family: 'Raleway', sans-serif;
@@ -25,11 +25,9 @@ p {
 
 #welcome {
     width: 100%;
-
     height: calc(100vh + 100px);
     display: flex;
     color: #272725;
-
 
     .welcome-text-wrapper {
         width: 50%;
@@ -44,10 +42,20 @@ p {
             justify-content: space-evenly;
             flex-direction: column;
             height: 300px;
+            overflow-y: hidden;
+
 
             .arrow-down {
                 font-size: 30px;
                 margin: 30px auto 0 auto;
+                display: flex;
+                border-radius: 100%;
+                padding: 5px;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #d4b895;
+                }
             }
 
 
@@ -94,9 +102,9 @@ p {
 
 
     .introduction-img {
+        background-image: url("../../public/welcome-img.jpg");
         width: 50%;
         max-height: 100%;
-        background-image: url("../../public/welcome-img.jpg");
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: contain;
@@ -105,13 +113,14 @@ p {
     .introduction-text {
         width: 50%;
         max-height: 100%;
-
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
         text-align: justify;
         padding: 70px;
+
+
 
         .introduction-icon {
             font-size: 50px;
@@ -132,7 +141,7 @@ p {
         }
 
         .introduction-btn {
-            border: 1px solid #c49782;
+            border: 1px solid #d4b895cd;
             background: none;
             min-width: 150px;
             min-height: 40px;
@@ -170,14 +179,279 @@ p {
 
 }
 
+#training {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .training-text {
+        width: 50%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: justify;
+        padding: 70px;
+        position: relative;
+
+        .svg-img {
+            opacity: 0.1;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 400px;
+            height: 400px;
+        }
+
+        .training-icon {
+            font-size: 50px;
+            transition: .3s;
+
+            &:hover {
+                color: #c49782;
+            }
+        }
+
+        h1 {
+            font-size: 35px;
+        }
+
+        h5 {
+            font-size: 18px;
+            line-height: 40px;
+        }
+
+        .introduction-btn {
+            border: 1px solid #d4b895;
+            background: none;
+            min-width: 150px;
+            min-height: 40px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            color: #c49782;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 0%;
+                background: #d4b895;
+                z-index: -1;
+                bottom: 0;
+                border-radius: 50% 50% 0 0;
+                transition: 0.8s;
+            }
+
+            &:hover::before {
+                height: 180%;
+            }
+        }
+    }
+
+    .training-img {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+        overflow-y: hidden;
+
+        .training-box {
+            width: 50%;
+            height: 100%;
+        }
+
+        .training-box:nth-child(2) {
+            background-color: #d4b895;
+
+        }
+
+        img {
+            max-width: 700px;
+            max-height: 900px;
+            position: absolute;
+            z-index: 1;
+            -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+            -moz-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+            box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+
+        }
+
+        // background-image: url("../../public/gym2.jpg");
+        // background-attachment: fixed;
+        // background-position: right 100px;
+        // background-size: 50%;
+        //=====
+        // background-size: 100%;
+        // background-repeat: no-repeat;
+    }
+}
+
+#cards-offer {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .card {
+        perspective: 100;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        border: 1px solid #bd8364;
+        background: none;
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+        -moz-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+        box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+        overflow: hidden;
+        transition: 0.3s;
 
 
 
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0%;
+            background: #bd8364;
+            z-index: -1;
+            border-radius: 0 0 200% 0;
+            transition: 0.8s;
+            opacity: 0.2;
+        }
+
+
+        &:hover::before {
+            width: 100%;
+        }
+
+
+
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        .card-title {
+            width: 100%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+            &:after {
+                content: "";
+                width: 90%;
+                background-color: #bd8364;
+                height: 2px;
+                bottom: 0;
+            }
+        }
+
+        .card-price {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .card-btn {
+            border: 1px solid #bd8364;
+            background: none;
+            min-width: 150px;
+            min-height: 40px;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 10px;
+            color: #bd8364;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 0%;
+                background: #bd8364;
+                z-index: -1;
+                // border-radius: 0 0 50% 0;
+                transition: 0.8s;
+            }
+
+
+            &:hover::before {
+                width: 180%;
+            }
+        }
+
+    }
+
+
+}
 
 
 
 
 //=============RWD==================
+@media screen and(min-width: 2050px) {
+    #training {
+        .training-img {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 1680px) {
+    #training {
+        .training-img {
+            img {
+                width: 450px;
+                height: 600px;
+            }
+        }
+    }
+}
+
 @media screen and(max-width: 960px) {
     .welcome-img-wrapper {
         img {
@@ -205,6 +479,26 @@ p {
         .introduction-text {
             h5 {
                 font-size: 15px;
+            }
+        }
+    }
+
+    #training {
+        .training-text {
+
+            h1 {
+                text-align: center;
+            }
+
+            h5 {
+                font-size: 15px;
+            }
+        }
+
+        .training-img {
+            img {
+                width: 350px;
+                height: 450px;
             }
         }
     }
@@ -267,7 +561,39 @@ p {
         .introduction-text {
             width: 100%;
             height: 100%;
-            padding: 20px;
+            padding: 20px 50px;
+        }
+    }
+
+    #training {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+
+        .training-text {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        .training-img {
+            height: 50%;
+            width: 100%;
+
+            .training-box {
+                display: none;
+            }
+
+            img {
+                width: 300px;
+                height: 400px;
+                top: 0;
+                position: inherit;
+            }
         }
     }
 }
@@ -302,6 +628,22 @@ p {
         .introduction-text {
             h5 {
                 font-size: 12px;
+            }
+        }
+    }
+
+    #training {
+        .training-text {
+            h5 {
+                font-size: 12px;
+            }
+        }
+
+        .training-img {
+
+            img {
+                width: auto;
+                height: 300px;
             }
         }
     }

@@ -2,9 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   /* background-color: #d4b895; */
   background: #faf7f5;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  background: white;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #be9157;
 }

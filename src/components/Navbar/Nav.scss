@@ -43,6 +43,10 @@ a {
         align-items: center;
         height: 100%;
 
+        li {
+            overflow: hidden;
+        }
+
     }
 
 
@@ -65,10 +69,10 @@ a {
         &:after {
             content: "";
             position: absolute;
-            height: 3px;
+            height: 4px;
             width: 0;
             left: 0;
-            bottom: -5px;
+            bottom: 0;
             background-color: #d4b895;
             transition: .3s;
         }
