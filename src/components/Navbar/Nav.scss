@@ -184,7 +184,14 @@ nav {
         justify-content: right;
         margin-right: 30px;
 
-        .logo-text {}
+        .logo-text {
+            transition: .5s;
+
+            &:hover {
+                color: #c49782;
+
+            }
+        }
     }
 
     .navigation {
@@ -192,6 +199,8 @@ nav {
         justify-content: left;
         align-items: center;
         width: 50%;
+        position: absolute;
+        left: 0;
     }
 
     .hamburger {
