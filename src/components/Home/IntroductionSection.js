@@ -1,7 +1,7 @@
 import react from 'react'
 import { Link } from "react-router-dom"
 import { motion } from 'framer-motion'
-import { textAnimation, reveal, revealReverse, fromDown } from "../Animation"
+import { textAnimation, reveal, fromDown } from "../Animation"
 import { useScroll } from "../useScroll";
 import "../../pages/Home.scss"
 import { GiTreeBranch } from "react-icons/gi"

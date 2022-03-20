@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { textAnimation, reveal, revealReverse, fromDown } from "../Animation"
 import { useScroll } from "../useScroll";
 import { BsFacebook, BsInstagram } from "react-icons/bs"
-import { AiOutlineClose } from "react-icons/ai"
 import "../../pages/Home.scss"
 
 
@@ -24,8 +23,8 @@ const Footer = () => {
                     <li><Link to="/contact" className="footer-link">Kontakt</Link></li>
                 </ul>
                 <div className="footer-icons">
-                    <a href=''><BsFacebook /></a>
-                    <a href=''> <BsInstagram /></a>
+                    <a href='https://www.facebook.com/stopkadietetyk'><BsFacebook /></a>
+                    <a href='https://instagram.com/joanna_stopka'> <BsInstagram /></a>
                 </div>
             </div>
         </div>
