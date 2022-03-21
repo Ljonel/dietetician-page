@@ -1,22 +1,18 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useScroll } from "../useScroll"
+import { imageAnimation, reveal } from "../Animation"
+import Title from "./Title"
 
-const word = "Hej! Jestem Asia";
-const wordTab = [...word];
-const Title = () => {
-    return (<>
-        <div className="title-wrapper">
-            {wordTab.map(x => (<motion.h1 >{x}</motion.h1>))}
-        </div>
-    </>
-    )
-}
+
+
 
 const DescriptionSection = () => {
 
+    const [element, controls] = useScroll();
 
     return (<>
-        <section id="about-desc">
+        <section id="about-desc" ref={element}>
             <div className="desc-img">
                 <div className="square"></div>
                 <img src="welcome-img.jpg" alt="" />

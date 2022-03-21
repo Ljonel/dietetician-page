@@ -75,7 +75,7 @@ $hover-color: #c49782;
 
                     &:hover {
                         color: $hover-color;
-                        transform: translateY(-10px);
+                        transform: translateY(-10px) !important;
                     }
                 }
             }
