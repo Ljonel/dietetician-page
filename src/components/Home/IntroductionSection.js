@@ -17,7 +17,9 @@ const IntroductionSection = () => {
                     <motion.div animate={controls} variants={fromDown} transition={{ delay: 0.2, type: "tween" }} ><GiTreeBranch className='introduction-icon' /></motion.div>
                     <motion.h1 animate={controls} variants={reveal} transition={{ delay: 0.2, type: "tween" }} >Poznajmy się</motion.h1>
                     <motion.h5 animate={controls} variants={textAnimation} transition={{ delay: 0.4, type: "tween" }} >
-                        Jestem Dyplomowanym Dietetykiem Klinicznym. Ukończyłam studia wyższe na Śląskim Uniwersytecie Medycznym w Katowicach. Kocham gotować i próbować nowych smaków. Mój blog powstał z myślą o tych, którzy szukają ciekawostek z dietetycznego świata oraz inspirujących przepisów na co dzień.
+                        Jestem Dyplomowanym Dietetykiem Sportowym i Klinicznym. 
+                        Ukończyłam studia wyższe na Śląskiej Wyższej Szkole Medycznej w Katowicach.
+                        Uwielbiam gotować, a w kuchni często eksperymentuję. 
                         Miło mi Cię poznać!
                     </motion.h5>
                     <Link to="/about">

@@ -74,9 +74,9 @@ p {
             z-index: 1;
             width: auto;
             max-height: 600px;
-            -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
-            -moz-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
-            box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+            -webkit-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
+            -moz-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
+            box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
         }
 
         .welcome-img {
@@ -328,7 +328,6 @@ p {
         position: relative;
 
 
-
         &::before {
             content: "";
             position: absolute;
@@ -348,9 +347,7 @@ p {
             width: 100%;
         }
 
-        &:hover {
-            transform: scale(1.1);
-        }
+
 
         .card-title {
             width: 100%;
@@ -383,10 +380,16 @@ p {
             align-items: center;
         }
 
-        img {
+        .card-img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                min-width: 150px;
+                height: 150px;
+            }
         }
 
         .card-btn {
@@ -427,7 +430,6 @@ p {
         }
 
     }
-
 
 }
 

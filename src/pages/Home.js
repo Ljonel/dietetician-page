@@ -37,7 +37,7 @@ const Home = () => {
                         </CountUp>
                         <h3>Przeprowadzone treningi</h3>
                     </div><div className="gauge-el">
-                        <CountUp end={27} redraw={true}>
+                        <CountUp end={52} redraw={true}>
                             {({ countUpRef, start }) => (
                                 <VisibilitySensor onChange={start} delayedCall>
                                     <span ref={countUpRef} />

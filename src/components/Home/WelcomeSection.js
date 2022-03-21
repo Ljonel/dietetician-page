@@ -15,7 +15,7 @@ const WelcomeSection = () => {
                     <div className="welcome-text">
                         <motion.h3 variants={reveal} animate={controls} transition={{ delay: 0.2, type: "spring" }} >Dietetyk | Trener personalny</motion.h3>
                         <motion.h1 variants={revealReverse} animate={controls} transition={{ delay: 0.2, type: "spring" }}>Joanna Stopka</motion.h1>
-                        <motion.p variants={reveal} animate={controls} transition={{ delay: 0.2, type: "spring" }}>Prosta i skuteczna metoda na wymarzoną sylwetkę</motion.p>
+                        <motion.p variants={reveal} animate={controls} transition={{ delay: 0.2, type: "spring" }}>Moją misją jest pomóc Ci zadbać o Twoje zdrowie</motion.p>
                         <motion.a variants={fromDown} animate={controls} transition={{ delay: 0.2, type: "spring" }} href="#introduction" className='arrow-down'><IoIosArrowDown /></motion.a>
                     </div>
                 </div>
