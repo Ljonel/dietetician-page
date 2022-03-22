@@ -1,29 +1,28 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { useScroll } from "../useScroll"
-import { imageAnimation, reveal , fromDown} from "../Animation"
+import { fromDown } from "../Animation"
 
 
-const word = "Hej! Jestem Asia";
-const wordTab = [...word];
-
- const Title = () => {
+export const Title = ( props) => {
     const [element, controls] = useScroll();
+
+    const word = `${props.word}`
+    const wordTab = [...word];
    
     return (<>
         <div className="title-wrapper" ref={element}>
             {wordTab.map((x, index) => (
-            <motion.h1 
-            key={index} 
-            variants={fromDown}
-            animate={controls} 
-            transition={{ delay: index/100, type: "tween" }} 
-            >
-                {x}
-            </motion.h1>))}
+                <motion.h1
+                    key={index} variants={fromDown}
+                    animate={controls}
+                    transition={{ delay: index / 90, type: "tween" }}
+                >
+                    {x}
+                </motion.h1>))}
         </div>
     </>
     )
 }
 
-export default Title
+export default Title;

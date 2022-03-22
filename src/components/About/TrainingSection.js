@@ -4,7 +4,7 @@ import { useScroll } from "../useScroll"
 import { imageAnimation, reveal, revealReverse, fromDown } from "../Animation"
 import Title from "./Title"
 
-const DescriptionSection = () => {
+const TrainingSection = () => {
 
     const [element, controls] = useScroll();
     return (<>
@@ -16,7 +16,7 @@ const DescriptionSection = () => {
             <div className="desc-text">
                 <div className="desc-text-title">
                     {/* <h1>Hej! Jestem Asia</h1> */}
-                    <Title word={"Hej! Jestem Asia"}/>
+                    <Title word={"Trener Personalny"}/>
                 </div>
                 <div className="desc-text-content">
                     <motion.p animate={controls} variants={revealReverse} transition={{ delay: 0.2, type: "tween" }}>I’m a functional medicine dietitian and health strategist. I take a root-cause approach to hormone havoc, skin struggles, and helping your body hum like the happy machine it was meant to be. But, I'm personally no stranger to confusion & complete desperation with health struggles. Especially when it comes to skin & hormones. I caught the health bug from my dad at an early age and started studying nutrition in college. </motion.p>
@@ -29,4 +29,4 @@ const DescriptionSection = () => {
     </>);
 }
 
-export default DescriptionSection;
+export default TrainingSection;

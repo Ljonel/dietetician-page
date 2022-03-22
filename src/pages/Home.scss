@@ -20,7 +20,11 @@ h1 {
 p {
     font-size: 20px;
 }
-
+.welcome-svg{
+    position: absolute;
+    top: 100px;
+    left: 0;
+}
 //===========Section1=============
 
 #welcome {
@@ -88,6 +92,7 @@ p {
             width: 50%;
             height: 100%;
             background: #d4b895;
+            // background: #C49782;
 
         }
     }
@@ -138,6 +143,7 @@ p {
         h5 {
             font-size: 18px;
             line-height: 40px;
+            text-align: center;
         }
 
         .introduction-btn {
@@ -220,6 +226,7 @@ p {
         h5 {
             font-size: 18px;
             line-height: 40px;
+            text-align: center;
         }
 
         .introduction-btn {

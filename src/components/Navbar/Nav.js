@@ -38,6 +38,7 @@ const Nav = () => {
                         <li><Link to="/" className="navigation-link">Strona główna</Link></li>
                         <li><Link to="/about" className="navigation-link">O mnie</Link></li>
                         <li><Link to="/offer" className="navigation-link">Oferta</Link></li>
+                        <li><Link to="/calc" className="navigation-link">Kalkulator kolorii</Link></li>
                         <li><Link to="/contact" className="navigation-link">Kontakt</Link></li>
                     </ul>) :
                     (
