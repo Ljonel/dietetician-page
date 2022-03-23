@@ -1,895 +1,864 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap");
 
 body {
-    font-family: 'Raleway', sans-serif;
-
+  font-family: "Raleway", sans-serif;
 }
 
 h3 {
-    font-size: 20px;
-    color: #f06f33;
-    text-transform: uppercase;
+  font-size: 20px;
+  color: #f06f33;
+  text-transform: uppercase;
 }
 
 h1 {
-    font-size: 55px;
-
+  font-size: 55px;
 }
 
 p {
-    font-size: 20px;
+  font-size: 20px;
 }
-.welcome-svg{
-    position: absolute;
-    top: 100px;
-    left: 0;
+.welcome-svg {
+  position: absolute;
+  top: 100px;
+  left: 0;
 }
 //===========Section1=============
 
 #welcome {
-    width: 100%;
-    height: calc(100vh + 100px);
+  width: 100%;
+  height: calc(100vh + 100px);
+  display: flex;
+  color: #272725;
+
+  .welcome-text-wrapper {
+    width: 50%;
+    height: 100%;
     display: flex;
-    color: #272725;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
 
-    .welcome-text-wrapper {
-        width: 50%;
-        height: 100%;
+    .welcome-text {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      height: 300px;
+      overflow-y: hidden;
+
+      .arrow-down {
+        font-size: 30px;
+        margin: 30px auto 0 auto;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-end;
+        border-radius: 100%;
+        padding: 5px;
+        transition: 0.3s;
 
-        .welcome-text {
-            display: flex;
-            justify-content: space-evenly;
-            flex-direction: column;
-            height: 300px;
-            overflow-y: hidden;
-
-
-            .arrow-down {
-                font-size: 30px;
-                margin: 30px auto 0 auto;
-                display: flex;
-                border-radius: 100%;
-                padding: 5px;
-                transition: .3s;
-
-                &:hover {
-                    background-color: #d4b895;
-                }
-            }
-
-
+        &:hover {
+          background-color: #d4b895;
         }
+      }
+    }
+  }
 
+  .welcome-img-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      position: absolute;
+      z-index: 1;
+      width: auto;
+      max-height: 600px;
+      -webkit-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
+      box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
     }
 
-    .welcome-img-wrapper {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        img {
-            position: absolute;
-            z-index: 1;
-            width: auto;
-            max-height: 600px;
-            -webkit-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
-            -moz-box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
-            box-shadow: 0px 0px 14px 1px rgba(66, 68, 90, 1);
-        }
-
-        .welcome-img {
-            width: 50%;
-            height: 100%;
-        }
-
-        .welcome-img-half {
-            width: 50%;
-            height: 100%;
-            background: #d4b895;
-            // background: #C49782;
-
-        }
+    .welcome-img {
+      width: 50%;
+      height: 100%;
     }
+
+    .welcome-img-half {
+      width: 50%;
+      height: 100%;
+      background: #d4b895;
+      // background: #C49782;
+    }
+  }
 }
 
 //===========Section2=============
 
 #introduction {
-    width: 100%;
-    height: 100vh;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .introduction-img {
+    background-image: url("../../public/welcome-img.jpg");
+    width: 50%;
+    max-height: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .introduction-text {
+    width: 50%;
+    max-height: 100%;
     display: flex;
-
-
-    .introduction-img {
-        background-image: url("../../public/welcome-img.jpg");
-        width: 50%;
-        max-height: 100%;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .introduction-text {
-        width: 50%;
-        max-height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: justify;
-        padding: 70px;
-
-
-
-        .introduction-icon {
-            font-size: 50px;
-            transition: .3s;
-
-            &:hover {
-                color: #c49782;
-            }
-        }
-
-        h1 {
-            font-size: 35px;
-        }
-
-        h5 {
-            font-size: 18px;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .introduction-btn {
-            border: 1px solid #d4b895cd;
-            background: none;
-            min-width: 150px;
-            min-height: 40px;
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            margin: 10px;
-            color: #c49782;
-            transition: 0.8s;
-            position: relative;
-            overflow: hidden;
-
-            &:hover {
-                color: #fff;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 0%;
-                background: #d4b895;
-                z-index: -1;
-                top: 0;
-                border-radius: 0 0 50% 50%;
-                transition: 0.8s;
-            }
-
-            &:hover::before {
-                height: 180%;
-            }
-        }
-    }
-
-}
-
-#training {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-
-    .training-text {
-        width: 50%;
-        max-height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        text-align: justify;
-        padding: 70px;
-        position: relative;
-
-        .svg-img {
-            opacity: 0.1;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            width: 400px;
-            height: 400px;
-        }
-
-        .training-icon {
-            font-size: 50px;
-            transition: .3s;
-
-            &:hover {
-                color: #c49782;
-            }
-        }
-
-        h1 {
-            font-size: 35px;
-        }
-
-        h5 {
-            font-size: 18px;
-            line-height: 40px;
-            text-align: center;
-        }
-
-        .introduction-btn {
-            border: 1px solid #d4b895;
-            background: none;
-            min-width: 150px;
-            min-height: 40px;
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            margin: 10px;
-            color: #c49782;
-            transition: 0.8s;
-            position: relative;
-            overflow: hidden;
-
-            &:hover {
-                color: #fff;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 0%;
-                background: #d4b895;
-                z-index: -1;
-                bottom: 0;
-                border-radius: 50% 50% 0 0;
-                transition: 0.8s;
-            }
-
-            &:hover::before {
-                height: 180%;
-            }
-        }
-    }
-
-    .training-img {
-        width: 50%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: relative;
-        overflow-y: hidden;
-
-        .training-box {
-            width: 50%;
-            height: 100%;
-        }
-
-        .training-box:nth-child(2) {
-            background-color: #d4b895;
-
-        }
-
-        img {
-            max-width: 700px;
-            max-height: 900px;
-            position: absolute;
-            z-index: 1;
-            -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
-            -moz-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
-            box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
-
-        }
-
-        // background-image: url("../../public/gym2.jpg");
-        // background-attachment: fixed;
-        // background-position: right 100px;
-        // background-size: 50%;
-        //=====
-        // background-size: 100%;
-        // background-repeat: no-repeat;
-    }
-}
-
-#cards-offer {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    overflow-y: hidden;
+    text-align: justify;
+    padding: 70px;
 
-    .card {
-        perspective: 100;
-        display: flex;
-        margin: 10px;
-        flex-direction: column;
-        width: 350px;
-        border: 1px solid #bd8364;
-        background: none;
-        height: 500px;
-        justify-content: center;
-        align-items: center;
-        // -webkit-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
-        // -moz-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
-        // box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
-        overflow: hidden;
-        transition: 0.3s;
-        position: relative;
+    .introduction-icon {
+      font-size: 50px;
+      transition: 0.3s;
 
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 0%;
-            z-index: -1;
-            border-radius: 0 0 200% 0;
-            transition: 0.8s;
-            background-color: #bd8364;
-            opacity: 0.2;
-        }
-
-
-        &:hover::before {
-            width: 100%;
-        }
-
-
-
-        .card-title {
-            width: 100%;
-            height: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-
-            &:after {
-                content: "";
-                width: 90%;
-                background-color: #bd8364;
-                height: 2px;
-                bottom: 0;
-            }
-
-            span {
-                width: 80%;
-                text-align: center;
-            }
-        }
-
-        .card-price {
-            width: 100%;
-            height: 30%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-
-        .card-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-
-            img {
-                min-width: 150px;
-                height: 150px;
-            }
-        }
-
-        .card-btn {
-            border: 1px solid #bd8364;
-            background: none;
-            min-width: 150px;
-            min-height: 40px;
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-            margin: 10px;
-            color: #bd8364;
-            transition: 0.8s;
-            position: relative;
-            overflow: hidden;
-
-            &:hover {
-                color: #fff;
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 0%;
-                background: #bd8364;
-                z-index: -1;
-                // border-radius: 0 0 50% 0;
-                transition: 0.8s;
-            }
-
-
-            &:hover::before {
-                width: 180%;
-            }
-        }
-
+      &:hover {
+        color: #c49782;
+      }
     }
-
-}
-
-#gauge {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    align-items: center;
-    height: 30vh;
-    font-size: 40px;
-    border-top: 10px solid #c49782;
-    border-bottom: 10px solid #c49782;
-
-    h3 {
-        color: black;
-        font-size: 15px;
-        letter-spacing: 5px;
-    }
-
-    .gauge-el {
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        span {
-            font-size: 2em;
-        }
-    }
-}
-
-.footer {
-    width: 100vw;
-    height: 40vh;
-    background-color: #c49782;
-    display: flex;
-    color: #faf7f5;
 
     h1 {
-        width: 100%;
-        text-align: center;
-        font-family: 'The Nautigal', cursive;
+      font-size: 35px;
     }
 
     h5 {
-        margin: 5px;
-        text-transform: uppercase;
-        font-size: 15px;
+      font-size: 18px;
+      line-height: 40px;
+      text-align: center;
     }
 
-    .footer-logo {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        letter-spacing: 5px;
+    .introduction-btn {
+      border: 1px solid #d4b895cd;
+      background: none;
+      min-width: 150px;
+      min-height: 40px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 10px;
+      color: #c49782;
+      transition: 0.8s;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: #d4b895;
+        z-index: -1;
+        top: 0;
+        border-radius: 0 0 50% 50%;
+        transition: 0.8s;
+      }
+
+      &:hover::before {
+        height: 180%;
+      }
     }
-
-    .footer-menu {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
-
-        ul {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-evenly;
-            padding: 20px;
-
-            .footer-link {
-                color: white;
-                transition: .3s;
-                text-decoration: none;
-
-                &:hover {
-                    color: #bd8364;
-                }
-            }
-        }
-
-
-        .footer-icons {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            padding: 20px;
-            justify-content: center;
-            align-items: flex-start;
-
-            a {
-                text-decoration: none;
-                color: white;
-            }
-
-            svg {
-                font-size: 40px;
-                margin: 0 20px;
-                transition: .3s;
-
-                &:hover {
-                    color: #bd8364;
-                }
-            }
-        }
-    }
+  }
 }
 
+#training {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+  .training-text {
+    width: 50%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: justify;
+    padding: 70px 30px;
+    position: relative;
+
+    .svg-img {
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 400px;
+      height: 400px;
+    }
+
+    .training-icon {
+      font-size: 50px;
+      transition: 0.3s;
+
+      &:hover {
+        color: #c49782;
+      }
+    }
+
+    h1 {
+      font-size: 35px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    .introduction-btn {
+      border: 1px solid #d4b895;
+      background: none;
+      min-width: 150px;
+      min-height: 40px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 10px;
+      color: #c49782;
+      transition: 0.8s;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0%;
+        background: #d4b895;
+        z-index: -1;
+        bottom: 0;
+        border-radius: 50% 50% 0 0;
+        transition: 0.8s;
+      }
+
+      &:hover::before {
+        height: 180%;
+      }
+    }
+  }
+
+  .training-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow-y: hidden;
+
+    .training-box {
+      width: 50%;
+      height: 100%;
+    }
+
+    .training-box:nth-child(2) {
+      background-color: #d4b895;
+    }
+
+    img {
+      max-width: 700px;
+      max-height: 900px;
+      position: absolute;
+      z-index: 1;
+      -webkit-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+      -moz-box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+      box-shadow: 6px 10px 20px -12px rgba(66, 68, 90, 1);
+    }
+
+    // background-image: url("../../public/gym2.jpg");
+    // background-attachment: fixed;
+    // background-position: right 100px;
+    // background-size: 50%;
+    //=====
+    // background-size: 100%;
+    // background-repeat: no-repeat;
+  }
+}
+
+#cards-offer {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow-y: hidden;
+
+  .card {
+    perspective: 100;
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    width: 350px;
+    border: 1px solid #bd8364;
+    background: none;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    // -webkit-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+    // -moz-box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+    // box-shadow: -1px 1px 19px -1px rgba(66, 68, 90, 1);
+    overflow: hidden;
+    transition: 0.3s;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 0%;
+      z-index: -1;
+      border-radius: 0 0 200% 0;
+      transition: 0.8s;
+      background-color: #bd8364;
+      opacity: 0.2;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    .card-title {
+      width: 100%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      &:after {
+        content: "";
+        width: 90%;
+        background-color: #bd8364;
+        height: 2px;
+        bottom: 0;
+      }
+
+      span {
+        width: 80%;
+        text-align: center;
+      }
+    }
+
+    .card-price {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .card-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        min-width: 150px;
+        height: 150px;
+      }
+    }
+
+    .card-btn {
+      border: 1px solid #bd8364;
+      background: none;
+      min-width: 150px;
+      min-height: 40px;
+      padding: 10px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      margin: 10px;
+      color: #bd8364;
+      transition: 0.8s;
+      position: relative;
+      overflow: hidden;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background: #bd8364;
+        z-index: -1;
+        // border-radius: 0 0 50% 0;
+        transition: 0.8s;
+      }
+
+      &:hover::before {
+        width: 180%;
+      }
+    }
+  }
+}
+
+#gauge {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  align-items: center;
+  height: 30vh;
+  font-size: 40px;
+  border-top: 10px solid #c49782;
+  border-bottom: 10px solid #c49782;
+
+  h3 {
+    color: black;
+    font-size: 15px;
+    letter-spacing: 5px;
+  }
+
+  .gauge-el {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    span {
+      font-size: 2em;
+    }
+  }
+}
+
+.footer {
+  width: 100vw;
+  height: 40vh;
+  background-color: #c49782;
+  display: flex;
+  color: #faf7f5;
+
+  h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "The Nautigal", cursive;
+  }
+
+  h5 {
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+
+  .footer-logo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+  }
+
+  .footer-menu {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    ul {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-evenly;
+      padding: 20px;
+
+      .footer-link {
+        color: white;
+        transition: 0.3s;
+        text-decoration: none;
+
+        &:hover {
+          color: #bd8364;
+        }
+      }
+    }
+
+    .footer-icons {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: flex-start;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      svg {
+        font-size: 40px;
+        margin: 0 20px;
+        transition: 0.3s;
+
+        &:hover {
+          color: #bd8364;
+        }
+      }
+    }
+  }
+}
 
 //=============RWD==================
 @media screen and(min-width: 2050px) {
-    #training {
-        .training-img {
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
+  #training {
+    .training-img {
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+  }
 
-    #cards-offer {
-        .card {
-            width: 500px;
-            height: 700px;
+  #cards-offer {
+    .card {
+      width: 500px;
+      height: 700px;
 
-            h3 {
-                font-size: 30px;
-            }
+      h3 {
+        font-size: 30px;
+      }
 
-            span {
-                font-size: 20px;
-            }
-        }
+      span {
+        font-size: 20px;
+      }
     }
+  }
 }
 
 @media screen and(max-width: 1680px) {
-    #training {
-        .training-img {
-            img {
-                width: 450px;
-                height: 600px;
-            }
-        }
+  #training {
+    .training-img {
+      img {
+        width: 450px;
+        height: 600px;
+      }
     }
+  }
 }
 
 @media screen and(max-width: 1120px) {
-    #cards-offer {
-        .card {
-            width: 300px;
-        }
+  #cards-offer {
+    .card {
+      width: 300px;
     }
+  }
 }
 
 @media screen and(max-width: 960px) {
-    .welcome-img-wrapper {
-        img {
-            width: 20px;
-            height: 500px;
-        }
+  .welcome-img-wrapper {
+    img {
+      width: 20px;
+      height: 500px;
+    }
+  }
+
+  .welcome-text-wrapper {
+    .welcome-text {
+      align-items: center;
+
+      h3 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+
+  #introduction {
+    .introduction-text {
+      h5 {
+        font-size: 15px;
+      }
+    }
+  }
+
+  #training {
+    .training-text {
+      h1 {
+        text-align: center;
+      }
+
+      h5 {
+        font-size: 15px;
+      }
     }
 
-    .welcome-text-wrapper {
-
-        .welcome-text {
-            align-items: center;
-
-            h3 {
-                font-size: 15px;
-            }
-
-            p {
-                font-size: 15px;
-            }
-        }
+    .training-img {
+      img {
+        width: 350px;
+        height: 450px;
+      }
     }
+  }
 
-    #introduction {
-        .introduction-text {
-            h5 {
-                font-size: 15px;
-            }
-        }
+  #cards-offer {
+    display: flex;
+
+    .card {
+      margin-top: 50px;
+      min-width: 400px;
+      max-width: 400px;
+      flex: 1 0 40%;
     }
+  }
 
-    #training {
-        .training-text {
-
-            h1 {
-                text-align: center;
-            }
-
-            h5 {
-                font-size: 15px;
-            }
-        }
-
-        .training-img {
-            img {
-                width: 350px;
-                height: 450px;
-            }
-        }
+  #gauge {
+    h3 {
+      text-align: center;
+      font-size: 13px;
     }
-
-    #cards-offer {
-        display: flex;
-
-        .card {
-            margin-top: 50px;
-            min-width: 400px;
-            max-width: 400px;
-            flex: 1 0 40%;
-        }
-    }
-
-    #gauge {
-        h3 {
-            text-align: center;
-            font-size: 13px;
-        }
-    }
+  }
 }
 
 @media screen and(max-width: 760px) {
+  #welcome {
+    flex-direction: column;
+    height: calc(100vh + 100px);
 
-    #welcome {
-        flex-direction: column;
-        height: calc(100vh + 100px);
+    .welcome-text-wrapper {
+      width: 100%;
+      height: 50%;
+      align-items: center;
+      margin-top: 100px;
 
-        .welcome-text-wrapper {
-            width: 100%;
-            height: 50%;
-            align-items: center;
-            margin-top: 100px;
+      .welcome-text {
+        width: 100%;
+        height: 300px;
+        justify-content: space-evenly;
 
-            .welcome-text {
-                width: 100%;
-                height: 300px;
-                justify-content: space-evenly;
-
-                .arrow-down {
-                    margin: 0;
-                    color: black;
-                }
-            }
+        .arrow-down {
+          margin: 0;
+          color: black;
         }
-
-        .welcome-img-wrapper {
-            width: 100%;
-            height: 50%;
-
-            img {
-                height: 450px;
-            }
-
-            .welcome-img {
-                width: 100%;
-                height: 100%;
-            }
-
-            .welcome-img-half {
-                width: 100%;
-                height: 100%;
-            }
-        }
+      }
     }
 
-    #introduction {
-        flex-direction: column-reverse;
+    .welcome-img-wrapper {
+      width: 100%;
+      height: 50%;
 
-        .introduction-img {
-            width: 100%;
-            height: 0%;
-            background-image: none;
-            background: red;
-        }
+      img {
+        height: 450px;
+      }
 
-        .introduction-text {
-            width: 100%;
-            height: 100%;
-            padding: 20px 50px;
-        }
-    }
-
-    #training {
-        flex-direction: column-reverse;
+      .welcome-img {
         width: 100%;
         height: 100%;
+      }
 
-        .training-text {
-            width: 100%;
-            height: 100vh;
-            position: relative;
-
-            h1 {
-                font-size: 25px;
-            }
-        }
-
-        .training-img {
-            height: 50%;
-            width: 100%;
-
-            .training-box {
-                display: none;
-            }
-
-            img {
-                width: 300px;
-                height: 400px;
-                top: 0;
-                position: inherit;
-            }
-        }
+      .welcome-img-half {
+        width: 100%;
+        height: 100%;
+      }
     }
+  }
+
+  #introduction {
+    flex-direction: column-reverse;
+
+    .introduction-img {
+      width: 100%;
+      height: 0%;
+      background-image: none;
+      background: red;
+    }
+
+    .introduction-text {
+      width: 100%;
+      height: 100%;
+      padding: 20px 50px;
+    }
+  }
+
+  #training {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+
+    .training-text {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+
+    .training-img {
+      height: 50%;
+      width: 100%;
+
+      .training-box {
+        display: none;
+      }
+
+      img {
+        width: 300px;
+        height: 400px;
+        top: 0;
+        position: inherit;
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 680px) {
-    .footer {
-        .footer-logo {
-            text-align: center;
-        }
-
-        .footer-menu {
-            ul {
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 20px 0 20px;
-            }
-
-            .footer-icons {
-                overflow: hidden;
-                align-items: center;
-            }
-        }
-
-
+  .footer {
+    .footer-logo {
+      text-align: center;
     }
+
+    .footer-menu {
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 20px 0 20px;
+      }
+
+      .footer-icons {
+        overflow: hidden;
+        align-items: center;
+      }
+    }
+  }
 }
 
 @media screen and(max-width: 375px) {
+  #welcome {
+    .welcome-text-wrapper {
+      height: 100%;
 
-    #welcome {
-        .welcome-text-wrapper {
-            height: 100%;
+      .welcome-text {
+        width: 90%;
+        text-align: center;
 
-            .welcome-text {
-                width: 90%;
-                text-align: center;
-
-                h1 {
-                    font-size: 40px;
-                }
-            }
+        h1 {
+          font-size: 40px;
         }
-
-        .welcome-img-wrapper {
-            height: 100%;
-
-            img {
-                height: 300px;
-            }
-        }
+      }
     }
 
-    #introduction {
+    .welcome-img-wrapper {
+      height: 100%;
 
-        .introduction-text {
-            h5 {
-                font-size: 12px;
-            }
-        }
+      img {
+        height: 300px;
+      }
+    }
+  }
+
+  #introduction {
+    .introduction-text {
+      h5 {
+        font-size: 12px;
+      }
+    }
+  }
+
+  #training {
+    .training-text {
+      h5 {
+        font-size: 12px;
+      }
     }
 
-    #training {
-        .training-text {
-            h5 {
-                font-size: 12px;
-            }
-        }
+    .training-img {
+      img {
+        width: auto;
+        height: 300px;
+      }
+    }
+  }
 
-        .training-img {
+  #cards-offer {
+    .card {
+      margin-top: 50px;
+      min-width: 300px;
+      max-width: 300px;
+      height: 450px;
+      flex: 1 0 40%;
+    }
+  }
 
-            img {
-                width: auto;
-                height: 300px;
-            }
-        }
+  #gauge {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    h3 {
+      font-size: 10px;
     }
 
-    #cards-offer {
-        .card {
-            margin-top: 50px;
-            min-width: 300px;
-            max-width: 300px;
-            height: 450px;
-            flex: 1 0 40%;
-        }
+    .gauge-el {
+      width: 100%;
+
+      span {
+        font-size: 45px;
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h5 {
+      font-size: 10px;
     }
 
-    #gauge {
-
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-
-        h3 {
-            font-size: 10px;
-        }
-
-        .gauge-el {
-            width: 100%;
-
-            span {
-                font-size: 45px;
-            }
-        }
+    .footer-logo {
+      width: 100%;
     }
 
-    .footer {
-        margin-top: 20px;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .footer-menu {
+      width: 100%;
+      height: 50%;
 
-        h5 {
-            font-size: 10px;
-        }
+      ul {
+        flex-direction: row;
+        padding: 0;
+      }
 
-        .footer-logo {
-            width: 100%;
-        }
-
-        .footer-menu {
-            width: 100%;
-            height: 50%;
-
-            ul {
-                flex-direction: row;
-                padding: 0;
-            }
-
-            .footer-icons {
-                height: 50%;
-                padding: 0;
-            }
-        }
+      .footer-icons {
+        height: 50%;
+        padding: 0;
+      }
     }
+  }
 }
