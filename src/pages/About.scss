@@ -101,6 +101,8 @@ $hover-color: #c49782;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-left: 50px;
+  overflow-x: hidden;
 
   .training-text {
     width: 50%;
@@ -180,27 +182,82 @@ $hover-color: #c49782;
 }
 
 #certificates {
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+
+  .title-wrapper {
+    position: relative;
+    display: flex;
+    h1 {
+      font-family: "Cookie", cursive;
+      font-size: 5rem;
+      transition: 0.1s;
+      cursor: default;
+      z-index: 999;
+      margin-left: 5px;
+
+      &:hover {
+        color: $hover-color;
+        transform: translateY(-10px) !important;
+      }
+    }
+  }
+  div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .cert-container {
+    padding-top: 50px;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+  .cert {
+    flex-basis: 1;
+    position: relative;
+    background-color: #dac3a4;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 400px;
+    max-height: 400px;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
 }
+
 .color-border {
   width: 100%;
   height: 30px;
-  background-color: #44342d;
 
-  &:nth-child(1) {
+  &:nth-of-type(1) {
+    background-color: #dac3a4;
   }
-
-  &:nth-child(2) {
-    background-color: #c49782;
+  &:nth-of-type(2) {
+    background-color: #d1b38d;
   }
-
-  &:nth-child(3) {
-    background-color: #9e7968;
+  &:nth-of-type(3) {
+    background-color: #c49f6e;
   }
-
-  &:nth-child(4) {
-    background-color: #634c41;
+  &:nth-of-type(4) {
+    background-color: #a37943;
   }
 }
 
@@ -213,6 +270,19 @@ $hover-color: #c49782;
         height: 800px;
       }
 
+      img {
+        max-width: 850px;
+        max-height: 900px;
+      }
+    }
+  }
+
+  #training-about {
+    .training-img {
+      .training-square {
+        width: 600px;
+        height: 800px;
+      }
       img {
         max-width: 850px;
         max-height: 900px;
@@ -503,6 +573,19 @@ $hover-color: #c49782;
           width: 100%;
         }
       }
+    }
+  }
+  #training-about {
+    margin: 0;
+  }
+  #certificates {
+    .cert-container {
+      gap: 0;
+    }
+    .cert {
+      width: 250px;
+      height: 300px;
+      margin-top: 10px;
     }
   }
 }

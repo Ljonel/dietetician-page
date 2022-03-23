@@ -12,7 +12,7 @@ const TrainingSection = () => {
       <section id="training-about" ref={element}>
         <div className="training-text">
           <div className="training-text-title">
-            <Title word={"Trener Personalny"} />
+            <Title word={"Jestem równiez..."} />
           </div>
           <div className="training-text-content">
             <motion.p
@@ -20,17 +20,17 @@ const TrainingSection = () => {
               variants={revealReverse}
               transition={{ delay: 0.2, type: "tween" }}
             >
-              Jestem absolwentką kursu na Trenera Personalnego i Instruktora
-              siłowni. Od dziecka jestem mocno związana ze sportem. Uwielbiam
-              aktywnie spędzać czas. Uważam, że odpowiednia aktywności fizyczna
-              to taka, która daje Ci radość i spełnienie.
+              Absolwentką kursu na Trenera Personalnego i Instruktora siłowni.
+              Od dziecka mocno związana ze sportem uwielbiam aktywnie spędzać
+              czas. Uważam, że odpowiednia aktywność fizyczna to taka, która
+              daje Ci radość i spełnienie.
             </motion.p>
             <motion.p
               animate={controls}
               variants={reveal}
               transition={{ delay: 0.2, type: "tween" }}
             >
-              Ja od sześciu lat trenuję siłowo – siłownia to mój drugi dom, w
+              Od sześciu lat trenuję siłowo – siłownia to mój drugi dom, w
               którym czuję się najlepiej. Tam przełamuję swoje bariery i
               stopniowo spełniam założone cele. Wysiłek fizyczny nie tylko
               pozytywnie wpływa na nasz organizm, ale kształtuje nasz charakter.

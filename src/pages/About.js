@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Nav from "../components/Navbar/Nav";
 import DescriptionSection from "../components/About/DescriptionSection";
 import TrainingSection from "../components/About/TrainingSection";
@@ -8,14 +8,6 @@ import "./About.scss";
 import { motion } from "framer-motion";
 const About = () => {
   // const { pathname } = useLocation();
-
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  }, []);
 
   return (
     <>
@@ -33,6 +25,7 @@ const About = () => {
         <div className="color-border"></div>
         <div className="color-border"></div>
         <div className="color-border"></div>
+        <CertificateSection />
         <Footer />
       </motion.div>
     </>
