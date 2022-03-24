@@ -10,7 +10,9 @@ const ProgramSection = () => {
 
   return (
     <>
-      <section id="program">x</section>
+      <section id="program">
+        <div className="program-wrapper">x</div>
+      </section>
     </>
   );
 };

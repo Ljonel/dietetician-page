@@ -24,7 +24,7 @@ export const certificates = [
     url: "./img/cert/certA4_1.jpg",
   },
   {
-    title: "A4 Podstawy odzywiania",
+    title: "A4 Podstawy odżywiania",
     url: "./img/cert/certA4_2.jpg",
   },
   {

@@ -6,6 +6,11 @@ import "../../pages/Offer.scss";
 import Title from "../Title";
 import { BsFillFileArrowDownFill, BsFillFileCheckFill } from "react-icons/bs";
 
+const variants = {
+  open: { opacity: 1, scale: 1.2, x: 1 },
+  closed: { opacity: 0, scale: 1, x: 1 },
+};
+
 const ConsultationSection = () => {
   const [element, controls] = useScroll();
   const [isSuccess, setIsSucces] = useState(false);
@@ -17,45 +22,90 @@ const ConsultationSection = () => {
     } else setIsSucces(!isSuccess);
   };
 
-  const variants = {
-    open: { opacity: 1, scale: 1.2, x: 1 },
-    closed: { opacity: 0, scale: 1, x: 1 },
-  };
   return (
     <>
-      <section id="consultation">
+      <section id="consultation" ref={element}>
         <Title word={"Oferta"} />
         <div className="consultation-wrapper">
           <div className="consultation-text">
             <div className="consultation-content">
-              <h1>Konsultacja żywieniowa</h1>
+              <motion.h1
+                animate={controls}
+                variants={reveal}
+                transition={{ delay: 0.1, type: "tween" }}
+              >
+                Konsultacja żywieniowa
+              </motion.h1>
               <ul>
-                <li>Ustalenie celów i zasad współpracy</li>
-                <li>Ocena sposobu odżywiania</li>
-                <li>Wykonanie podstawowych pomiarów antropometrycznych</li>
-                <li>Przeprowadzenie wywiadu zdrowotno – żywieniowego</li>
+                <motion.li
+                  animate={controls}
+                  variants={reveal}
+                  transition={{ delay: 0.2, type: "tween" }}
+                >
+                  Ustalenie celów i zasad współpracy
+                </motion.li>
+                <motion.li
+                  animate={controls}
+                  variants={reveal}
+                  transition={{ delay: 0.3, type: "tween" }}
+                >
+                  Ocena sposobu odżywiania
+                </motion.li>
+                <motion.li
+                  animate={controls}
+                  variants={reveal}
+                  transition={{ delay: 0.4, type: "tween" }}
+                >
+                  Wykonanie pomiarów antropometrycznych
+                </motion.li>
+                <motion.li
+                  animate={controls}
+                  variants={reveal}
+                  transition={{ delay: 0.5, type: "tween" }}
+                >
+                  Przeprowadzenie wywiadu zdrowotno – żywieniowego
+                </motion.li>
               </ul>
             </div>
 
-            <h3 style={{ textAlign: "center" }}>
+            <motion.h3
+              animate={controls}
+              variants={fromDown}
+              transition={{ delay: 0.2, type: "tween" }}
+              style={{ textAlign: "center" }}
+            >
               Konsultacja Żywieniowa może być również przeprowadzona online{" "}
-            </h3>
+            </motion.h3>
             <div className="consultation-visit">
-              <p>
+              <motion.p
+                animate={controls}
+                variants={reveal}
+                transition={{ delay: 0.1, type: "tween" }}
+              >
                 <b>Jak prawidłowo przygotować się do pierwszej wizyty?</b>
-              </p>
-              <p>
+              </motion.p>
+              <motion.p
+                animate={controls}
+                variants={reveal}
+                transition={{ delay: 0.1, type: "tween" }}
+              >
                 {" "}
                 Zabierz ze sobą aktualne wyniki podstawowych badań krwi
                 (morfologia, lipidogram, TSH, FT3, FT4, AlAT, AspAT, glukoza)
                 oraz wypełniony dzienniczek żywieniowy uwzględniający wszystkie
                 spożyte posiłki oraz wypite płyny z 3 dni poprzedzających
                 wizytę.
-              </p>
+              </motion.p>
             </div>
 
-            <a href="#" onClick={fileClickHandler}>
-              <div className="icon-wrapper">
+            <motion.a
+              href="#"
+              onClick={fileClickHandler}
+              animate={controls}
+              variants={fromDown}
+              transition={{ delay: 0.1, type: "tween" }}
+            >
+              <motion.div className="icon-wrapper">
                 <motion.div
                   className="downloadFile-icon"
                   animate={isSuccess ? "closed" : "open"}
@@ -72,13 +122,24 @@ const ConsultationSection = () => {
                 >
                   <BsFillFileCheckFill />
                 </motion.div>
-              </div>
-              <p>Pobierz dziennieczek zywieniowy</p>
-            </a>
+              </motion.div>
+              <p>Pobierz dziennieczek żywieniowy</p>
+            </motion.a>
           </div>
           <div className="consultation-img">
-            <div className="square"></div>
-            <img src="gym1.jpg" alt="" />
+            <motion.div
+              className="square"
+              animate={controls}
+              variants={imageAnimation}
+              transition={{ delay: 0.2, type: "tween" }}
+            ></motion.div>
+            <motion.img
+              animate={controls}
+              variants={imageAnimation}
+              transition={{ delay: 0.4, type: "tween" }}
+              src="gym1.jpg"
+              alt=""
+            />
           </div>
         </div>
         <div className="program"></div>
