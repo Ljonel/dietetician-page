@@ -13,7 +13,7 @@ const App = () => {
       left: 0,
       behavior: "smooth",
     });
-  }, []);
+  }, [location]);
   return (
     <>
       <AnimatePresence exitBeforeEnter>

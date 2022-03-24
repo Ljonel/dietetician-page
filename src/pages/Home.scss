@@ -117,7 +117,15 @@ p {
     align-items: center;
     text-align: justify;
     padding: 70px;
-
+    position: relative;
+    .svg-img {
+      opacity: 0.1;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 400px;
+      height: 400px;
+    }
     .introduction-icon {
       font-size: 50px;
       transition: 0.3s;

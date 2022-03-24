@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useScroll } from "../useScroll";
-import { imageAnimation, reveal, revealReverse, fromDown } from "../Animation";
+import { imageAnimation, reveal, revealReverse } from "../Animation";
 import Title from "../Title";
 import "../../pages/About.scss";
 
@@ -20,10 +20,10 @@ const TrainingSection = () => {
               variants={revealReverse}
               transition={{ delay: 0.2, type: "tween" }}
             >
-              Absolwentką kursu na Trenera Personalnego i Instruktora siłowni.
-              Od dziecka mocno związana ze sportem uwielbiam aktywnie spędzać
-              czas. Uważam, że odpowiednia aktywność fizyczna to taka, która
-              daje Ci radość i spełnienie.
+              Trenerem Personalnym i Instruktorem siłowni. Od dziecka mocno
+              związana ze sportem, uwielbiam aktywnie spędzać czas. Uważam, że
+              odpowiednia aktywność fizyczna to taka, która daje Ci radość i
+              spełnienie.
             </motion.p>
             <motion.p
               animate={controls}

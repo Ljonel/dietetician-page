@@ -69,7 +69,7 @@ const IntroductionSection = () => {
             animate={controls}
             variants={imageAnimation}
             transition={{ delay: 0.3, type: "tween" }}
-            src="gym2.jpg"
+            src="gym3.jpg"
             alt=""
           />
         </div>
