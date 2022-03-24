@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+#consultation {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  flex-direction: column;
+  .title-wrapper {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    top: 150px;
+    h1 {
+      font-family: "Cookie", cursive;
+      font-size: 5rem;
+      letter-spacing: 3px;
+      transition: 0.1s;
+      margin-left: 5px;
+      cursor: default;
+
+      &:hover {
+        color: #c49782;
+        transform: translateY(-10px) !important;
+      }
+    }
+  }
+  .consultation-wrapper {
+    margin-top: 50px;
+    width: 95%;
+    min-height: 100%;
+    background: #fff;
+    display: flex;
+    position: relative;
+
+    .consultation-text {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      a {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        text-decoration: none;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+
+        .icon-wrapper {
+          width: 30%;
+          height: 100%;
+          height: 100%;
+          position: relative;
+          .downloadFile-icon {
+            transition: 0.3s;
+            font-size: 40px;
+            color: #705143;
+            position: absolute;
+            right: 10px;
+          }
+        }
+
+        p {
+          text-decoration: underline;
+          width: 70%;
+        }
+      }
+      .consultation-content {
+        width: 90%;
+        display: flex;
+        height: 40%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        ul {
+          list-style-type: square;
+          font-size: 1.1rem;
+
+          li {
+            margin: 10px;
+          }
+        }
+      }
+      .consultation-desc {
+        width: 90%;
+        height: 60%;
+        p {
+          text-align: justify;
+          font-size: 1.1rem;
+          line-height: 25px;
+          margin-top: 15px;
+        }
+      }
+      .consultation-visit {
+        width: 90%;
+        height: 33%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+    }
+
+    .consultation-img {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .square {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 50%;
+        background: #f5e5d0;
+        z-index: 1;
+      }
+      img {
+        z-index: 999;
+        width: 500px;
+        height: 650px;
+      }
+    }
+  }
+
+  .program {
+  }
+}
+
+@media screen and(max-width: 1680px) {
+  #consultation {
+    .consultation-wrapper {
+      .consultation-text {
+        width: 60%;
+      }
+      .consultation-img {
+        width: 40%;
+        .square {
+          height: 100%;
+        }
+        img {
+          width: 350px;
+          height: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 960px) {
+  #consultation {
+    .consultation-wrapper {
+      .consultation-text {
+        .consultation-content {
+          h1 {
+            font-size: 2rem;
+          }
+        }
+        .consultation-visit {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
