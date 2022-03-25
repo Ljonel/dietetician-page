@@ -124,16 +124,26 @@ const ConsultationSection = () => {
               <p>Pobierz dziennieczek żywieniowy</p>
             </motion.a> */}
 
-            <p>Pobierz dzienniczek żywieniowy</p>
+            <motion.p
+              animate={controls}
+              variants={fromDown}
+              transition={{ delay: 0.05, type: "tween" }}
+            >
+              Pobierz dzienniczek żywieniowy
+            </motion.p>
 
-            <motion.button whileTap={{ scale: 1.3 }} className="diary-btn">
-              Pobierz
-              <a
-                href="/Dzienniczek-Żywieniowy-Joanna-Stopka-Dietetyk-Trener-Personalny"
-                download
-                className="diary-link"
-              ></a>
-            </motion.button>
+            <motion.a
+              animate={controls}
+              variants={fromDown}
+              transition={{ delay: 0.1, type: "tween" }}
+              href="/Dzienniczek-Żywieniowy-Joanna-Stopka-Dietetyk-Trener-Personalny.pdf"
+              download
+              className="diary-link"
+            >
+              <motion.button whileTap={{ scale: 1.3 }} className="diary-btn">
+                Pobierz
+              </motion.button>
+            </motion.a>
           </div>
           <div className="consultation-img">
             <motion.div

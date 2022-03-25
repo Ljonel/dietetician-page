@@ -60,7 +60,6 @@ const CardsSection = () => {
               <motion.span>{card.text}</motion.span>
             </div>
             <div className="card-price">
-              <span>{card.price}zł</span>
               <Link to="/" title={card.title}>
                 <button className="card-btn">Wybierz</button>
               </Link>
