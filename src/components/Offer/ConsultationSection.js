@@ -67,7 +67,6 @@ const ConsultationSection = () => {
                 </motion.li>
               </ul>
             </div>
-
             <motion.h3
               animate={controls}
               variants={fromDown}
@@ -97,8 +96,7 @@ const ConsultationSection = () => {
                 wizytę.
               </motion.p>
             </div>
-
-            <motion.a
+            {/* <motion.a
               href="#"
               onClick={fileClickHandler}
               animate={controls}
@@ -124,7 +122,18 @@ const ConsultationSection = () => {
                 </motion.div>
               </motion.div>
               <p>Pobierz dziennieczek żywieniowy</p>
-            </motion.a>
+            </motion.a> */}
+
+            <p>Pobierz dzienniczek żywieniowy</p>
+
+            <motion.button whileTap={{ scale: 1.3 }} className="diary-btn">
+              Pobierz
+              <a
+                href="/Dzienniczek-Żywieniowy-Joanna-Stopka-Dietetyk-Trener-Personalny"
+                download
+                className="diary-link"
+              ></a>
+            </motion.button>
           </div>
           <div className="consultation-img">
             <motion.div

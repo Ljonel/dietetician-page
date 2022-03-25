@@ -49,35 +49,70 @@
       align-items: center;
       overflow: hidden;
 
-      a {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        text-decoration: none;
-        color: black;
-        justify-content: center;
-        align-items: center;
+      .diary-btn {
+        border: 1px solid #c49782;
+        background: none;
+        transition: 0.1s;
+        cursor: pointer;
+        width: 100px;
         height: 50px;
+        position: relative;
 
-        .icon-wrapper {
-          width: 30%;
-          height: 100%;
-          height: 100%;
-          position: relative;
-          .downloadFile-icon {
-            transition: 0.3s;
-            font-size: 40px;
-            color: #f5e5d0;
-            position: absolute;
-            right: 10px;
-          }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 0%;
+          background: rgb(212, 184, 149, 0.3);
+          bottom: 0;
+          border-radius: 50% 50% 0 0;
+          transition: 0.8s;
         }
 
-        p {
-          text-decoration: underline;
-          width: 70%;
+        &:hover::after {
+          height: 80%;
+          color: white;
+        }
+        .diary-link {
+          z-index: 100;
+          text-decoration: none;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
+
+      //   a {
+      //     width: 100%;
+      //     height: 100px;
+      //     display: flex;
+      //     text-decoration: none;
+      //     color: black;
+      //     justify-content: center;
+      //     align-items: center;
+      //     height: 50px;
+      //     .icon-wrapper {
+      //       width: 30%;
+      //       height: 100%;
+      //       height: 100%;
+      //       position: relative;
+      //       .downloadFile-icon {
+      //         transition: 0.3s;
+      //         font-size: 40px;
+      //         color: #f5e5d0;
+      //         position: absolute;
+      //         right: 10px;
+      //       }
+      //     }
+
+      //     p {
+      //       text-decoration: underline;
+      //       width: 70%;
+      //     }
+      //   }
+
       .consultation-content {
         width: 90%;
         display: flex;
@@ -155,7 +190,6 @@
   .program-wrapper {
     width: 90%;
     height: 100%;
-    background: red;
   }
 }
 @media screen and(max-width: 1680px) {

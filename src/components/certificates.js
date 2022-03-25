@@ -20,6 +20,10 @@ export const certificates = [
     url: "./img/cert/cert_suplementy.jpg",
   },
   {
+    title: "SWSM Suplementy diety",
+    url: "./img/cert/0.jpg",
+  },
+  {
     title: "A4 Dieta a problemy hormonalne",
     url: "./img/cert/certA4_1.jpg",
   },
