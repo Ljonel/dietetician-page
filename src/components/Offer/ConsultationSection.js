@@ -156,7 +156,7 @@ const ConsultationSection = () => {
               animate={controls}
               variants={imageAnimation}
               transition={{ delay: 0.4, type: "tween" }}
-              src="gym1.jpg"
+              src="dietetyk.png"
               alt=""
             />
           </div>

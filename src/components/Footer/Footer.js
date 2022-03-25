@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { textAnimation, reveal, revealReverse, fromDown } from "../Animation";
 import { useScroll } from "../useScroll";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
-import "../../pages/Home.scss";
+import "./Footer.scss";
 
 const Footer = () => {
   return (
@@ -23,22 +23,22 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/about" className="footer-link">
+              <Link to="/o-mnie" className="footer-link">
                 O mnie
               </Link>
             </li>
             <li>
-              <Link to="/offer" className="footer-link">
+              <Link to="/oferta" className="footer-link">
                 Oferta
               </Link>
             </li>
             <li>
-              <Link to="/calc" className="footer-link">
+              <Link to="/kalulator" className="footer-link">
                 Kalkulator kalorii
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="footer-link">
+              <Link to="/kontakt" className="footer-link">
                 Kontakt
               </Link>
             </li>

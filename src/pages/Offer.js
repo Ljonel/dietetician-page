@@ -4,6 +4,7 @@ import Footer from "../components/Footer/Footer";
 import { motion } from "framer-motion";
 import ConsultationSection from "../components/Offer/ConsultationSection";
 import ProgramSection from "../components/Offer/ProgramSection";
+import TrainingSection from "../components/Offer/TrainingSection";
 
 const Offer = () => {
   return (
@@ -11,6 +12,8 @@ const Offer = () => {
       <Nav />
       <ConsultationSection />
       <ProgramSection />
+      <TrainingSection />
+      <Footer />
     </>
   );
 };

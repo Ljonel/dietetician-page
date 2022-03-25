@@ -5,70 +5,58 @@ import { imageAnimation, reveal, revealReverse, fromDown } from "../Animation";
 import "../../pages/Offer.scss";
 import Title from "../Title";
 
-const ProgramSection = () => {
+const TrainingSection = () => {
   const [element, controls] = useScroll();
-
   return (
     <>
-      <section id="program" ref={element}>
-        <motion.div
-          animate={controls}
-          variants={imageAnimation}
-          transition={{ delay: 0.1, type: "tween" }}
-          className="program-img"
-        ></motion.div>
-        <div className="program-text">
-          <motion.h1
-            animate={controls}
-            variants={reveal}
-            transition={{ delay: 0.1, type: "tween" }}
-          >
-            {" "}
-            Spersonalizowany program odżywiania
-          </motion.h1>
+      <section id={"training"} ref={element}>
+        <div className="training-text">
+          <h1>Trening personalny</h1>
           <ul>
             <motion.li
               animate={controls}
               variants={reveal}
               transition={{ delay: 0.1, type: "tween" }}
             >
-              Jadłospis na 7 – dni Lista zakupów
+              Wykonanie testów oceny zdrowia i sprawności fizycznej
             </motion.li>
             <motion.li
               animate={controls}
               variants={reveal}
               transition={{ delay: 0.2, type: "tween" }}
             >
-              Sposób przygotowania posiłków
+              Korekcja wad postawy w płaszczyźnie strzałkowej
             </motion.li>
             <motion.li
               animate={controls}
               variants={reveal}
               transition={{ delay: 0.3, type: "tween" }}
             >
-              Indywidualne zalecenia żywieniowe
+              Programowanie planów treningowych
             </motion.li>
             <motion.li
               animate={controls}
               variants={reveal}
               transition={{ delay: 0.4, type: "tween" }}
             >
-              Raport z pierwszej wizyty
+              Dobór odpowiedniej suplementacji
             </motion.li>
           </ul>
           <motion.p
             animate={controls}
             variants={reveal}
             transition={{ delay: 0.1, type: "tween" }}
-          >
-            Jadłospis jest przygotowany na podstawie zebranych informacji
-            podczas konsultacji żywieniowej oraz uwzględnia stan zdrowia,
-            preferencje smakowe oraz dotychczasowy sposób odżywiania.
-          </motion.p>
+          ></motion.p>
         </div>
+        <motion.div
+          animate={controls}
+          variants={imageAnimation}
+          transition={{ delay: 0.1, type: "tween" }}
+          className="training-offer-img"
+        ></motion.div>
       </section>
     </>
   );
 };
 
-export default ProgramSection;
+export default TrainingSection;
