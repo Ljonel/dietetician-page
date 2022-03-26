@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import {
   imageAnimation,
@@ -11,16 +11,19 @@ import { useScroll } from "../useScroll";
 import Title from "../Title";
 import { Formik, Field, Form } from "formik";
 
-const calcBtnHandler = (e) => {
-  if (Formik.initialValues !== null) {
-    document.getElementById("ppm-result").scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
-    });
-  }
-};
 const CalcForm = ({ ppm, setPPM }) => {
+  const calcBtnHandler = () => {
+    if (Formik.initialValues !== null) {
+      document.getElementById("ppm-result").scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    } else {
+      console.log("chuj");
+    }
+  };
+
   const CalculatePPM = (values) => {
     if (values.sex === "kobieta") {
       const value = Math.floor(
