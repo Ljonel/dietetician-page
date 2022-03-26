@@ -6,18 +6,13 @@ import ConsultationSection from "../components/Offer/ConsultationSection";
 import ProgramSection from "../components/Offer/ProgramSection";
 import TrainingSection from "../components/Offer/TrainingSection";
 import { AnimatePresence } from "framer-motion";
-const Offer = () => {
+
+const Contact = () => {
   return (
     <>
-      <AnimatePresence exitBeforeEnter>
-        <Nav />
-        <ConsultationSection />
-        <ProgramSection />
-        <TrainingSection />
-        <Footer />
-      </AnimatePresence>
+      <Nav />
     </>
   );
 };
 
-export default Offer;
+export default Contact;

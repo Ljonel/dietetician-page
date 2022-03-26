@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Nav from "../components/Navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import "./Calc.scss";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import CalcForm from "../components/Calculator/CalcForm";
 import { useScroll } from "../components/useScroll";
 import {
@@ -13,13 +13,12 @@ import {
   fromDown,
 } from "../components/Animation";
 const Calc = () => {
-  const [ppm, setPPM] = useState(0);
-  const [element, controls] = useScroll();
+  const ppmFromLocalStorage = localStorage.getItem("ppm");
   return (
     <>
       <Nav />
-      <CalcForm ppm={ppm} setPPM={setPPM} />
-      {ppm === 0 ? null : (
+      <CalcForm />
+      {ppmFromLocalStorage === null ? null : (
         <section id="ppm-result">
           <div className="ppm-content">
             <p>
@@ -31,11 +30,12 @@ const Calc = () => {
             </p>
             <div className="ppm-value">
               <h3>Twoja Podstawowa Przemiana Materii (PPM):</h3>
-              <p> {ppm} kcal</p>
+              <p> {ppmFromLocalStorage} kcal</p>
             </div>
           </div>
         </section>
       )}
+
       <Footer />
     </>
   );

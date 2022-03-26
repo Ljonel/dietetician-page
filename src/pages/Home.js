@@ -6,7 +6,6 @@ import TrainingSection from "../components/Home/TrainingSection";
 import CardsSection from "../components/Home/CardsSection";
 import Footer from "../components/Footer/Footer";
 import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
 import { InView } from "react-intersection-observer";
 
 import "./Home.scss";

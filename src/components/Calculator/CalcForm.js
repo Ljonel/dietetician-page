@@ -11,17 +11,13 @@ import { useScroll } from "../useScroll";
 import Title from "../Title";
 import { Formik, Field, Form } from "formik";
 
-const CalcForm = ({ ppm, setPPM }) => {
+const CalcForm = () => {
   const calcBtnHandler = () => {
-    if (Formik.initialValues !== null) {
-      document.getElementById("ppm-result").scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-      });
-    } else {
-      console.log("chuj");
-    }
+    document.getElementById("ppm-result").scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
   };
 
   const CalculatePPM = (values) => {
@@ -29,12 +25,12 @@ const CalcForm = ({ ppm, setPPM }) => {
       const value = Math.floor(
         665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
       );
-      setPPM(value);
+      localStorage.setItem("ppm", value);
     } else {
       const value = Math.floor(
         665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
       );
-      setPPM(value);
+      localStorage.setItem("ppm", value);
     }
   };
   const [element, controls] = useScroll();
