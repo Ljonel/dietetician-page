@@ -7,6 +7,8 @@ import CardsSection from "../components/Home/CardsSection";
 import Footer from "../components/Footer/Footer";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+import { InView } from "react-intersection-observer";
+
 import "./Home.scss";
 import { motion } from "framer-motion";
 const Home = () => {
@@ -26,9 +28,9 @@ const Home = () => {
           <div className="gauge-el">
             <CountUp end={34} redraw={true}>
               {({ countUpRef, start }) => (
-                <VisibilitySensor onChange={start} delayedCall>
+                <InView onChange={start}>
                   <span ref={countUpRef} />
-                </VisibilitySensor>
+                </InView>
               )}
             </CountUp>
             <h3>Rozpisane jadłospisy</h3>
@@ -36,9 +38,9 @@ const Home = () => {
           <div className="gauge-el">
             <CountUp end={140} redraw={true}>
               {({ countUpRef, start }) => (
-                <VisibilitySensor onChange={start} delayedCall>
+                <InView onChange={start}>
                   <span ref={countUpRef} />
-                </VisibilitySensor>
+                </InView>
               )}
             </CountUp>
             <h3>Przeprowadzone treningi</h3>
@@ -46,9 +48,9 @@ const Home = () => {
           <div className="gauge-el">
             <CountUp end={52} redraw={true}>
               {({ countUpRef, start }) => (
-                <VisibilitySensor onChange={start} delayedCall>
+                <InView onChange={start}>
                   <span ref={countUpRef} />
-                </VisibilitySensor>
+                </InView>
               )}
             </CountUp>
             <h3>Klienci</h3>

@@ -1,7 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=The+Nautigal&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
-
 #consultation {
   width: 100%;
   height: 100vh;
@@ -310,6 +306,11 @@
     .consultation-wrapper {
       .consultation-text {
         width: 60%;
+        .consultation-visit {
+          p {
+            font-size: 15px;
+          }
+        }
       }
       .consultation-img {
         width: 40%;

@@ -33,7 +33,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/kalulator" className="footer-link">
+              <Link to="/kalkulator" className="footer-link">
                 Kalkulator kalorii
               </Link>
             </li>

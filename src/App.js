@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Offer from "./pages/Offer";
+import Calc from "./pages/Calc";
 import { AnimatePresence, motion } from "framer-motion";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/o-mnie" element={<About />} />
           <Route path="/oferta" element={<Offer />} />
+          <Route path="/kalkulator" element={<Calc />} />
         </Routes>
       </AnimatePresence>
     </>

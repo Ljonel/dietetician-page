@@ -20,7 +20,7 @@ const cards = [
     text: "1 godz.",
     price: "120",
     imgUrl: "gym1.jpg",
-    location: "/offer#consultation",
+    location: "/oferta#consultation",
     animate: fromDown,
   },
   {
@@ -28,7 +28,7 @@ const cards = [
     text: "ok. 35 przepisów",
     price: "250",
     imgUrl: "fruits.png",
-    location: "/offer#program",
+    location: "/oferta#program",
     animate: fromUp,
   },
   {
@@ -36,7 +36,7 @@ const cards = [
     text: "1 godz.",
     price: "90/130",
     imgUrl: "gym3.jpg",
-    location: "/offer#training",
+    location: "/oferta#training",
 
     animate: fromDown,
   },
