@@ -2,15 +2,14 @@ import React from "react";
 import Nav from "../components/Navbar/Nav";
 import Footer from "../components/Footer/Footer";
 import { motion } from "framer-motion";
-import ConsultationSection from "../components/Offer/ConsultationSection";
-import ProgramSection from "../components/Offer/ProgramSection";
-import TrainingSection from "../components/Offer/TrainingSection";
-import { AnimatePresence } from "framer-motion";
-
+import ContactForm from "../components/Contact/ContactForm";
+import "./Contact.scss";
 const Contact = () => {
   return (
     <>
       <Nav />
+      <ContactForm />
+      <Footer />
     </>
   );
 };
