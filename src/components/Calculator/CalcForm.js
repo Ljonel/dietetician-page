@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import {
-  imageAnimation,
-  box,
-  reveal,
-  revealReverse,
-  fromDown,
-} from "../Animation";
-import { useScroll } from "../useScroll";
 import Title from "../Title";
 import { Formik, Field, Form } from "formik";
 
-const CalcForm = () => {
+const CalcForm = ({ setPPM, ppm }) => {
   const calcBtnHandler = () => {
     document.getElementById("ppm-result").scrollIntoView({
       behavior: "smooth",
@@ -21,19 +13,22 @@ const CalcForm = () => {
   };
 
   const CalculatePPM = (values) => {
+    let ppm = 0;
+
     if (values.sex === "kobieta") {
-      const value = Math.floor(
+      ppm = Math.floor(
         665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
       );
-      localStorage.setItem("ppm", value);
+      localStorage.setItem("ppm", ppm);
+      setPPM(ppm);
     } else {
-      const value = Math.floor(
+      ppm = Math.floor(
         665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
       );
-      localStorage.setItem("ppm", value);
+      localStorage.setItem("ppm", ppm);
+      setPPM(ppm);
     }
   };
-  const [element, controls] = useScroll();
 
   return (
     <>
