@@ -136,6 +136,15 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    position: relative;
+
+    .ppm-icon {
+      position: absolute;
+      left: -25px;
+      top: -25px;
+      font-size: 50px;
+      color: #f06f33;
+    }
     .ppm-value {
       width: 100%;
       h3 {

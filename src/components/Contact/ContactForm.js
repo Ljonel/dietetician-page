@@ -3,17 +3,22 @@ import Title from "../Title";
 import { Formik, Field, Form } from "formik";
 import emailjs from "emailjs-com";
 import { AiOutlineClose } from "react-icons/ai";
+import audio from "../../assets/whoosh.mp3";
+
 const ContactForm = () => {
   const form = useRef();
   const [successInfo, setSuccessInfo] = useState(false);
+  const playSound = () => {
+    new Audio(audio).play();
+  };
   const sendEmail = (e) => {
     try {
       emailjs
         .sendForm(
           "gmail",
-          "template_tt4hrs5",
+          "template_h27mwfk",
           form.current,
-          "unDjJ6HRupmNA3evy"
+          "MOAQZgPKLOz04VvQd"
         )
         .then(
           (result) => {
@@ -42,8 +47,11 @@ const ContactForm = () => {
           email: "",
           message: "",
         }}
-        onSubmit={(values) => {
+        onSubmit={(values, { resetForm }) => {
           sendEmail();
+          setTimeout(() => {
+            resetForm();
+          }, 1000);
         }}
       >
         <Form className="contact-form" ref={form}>
@@ -92,8 +100,9 @@ const ContactForm = () => {
             {successInfo ? (
               <div className="success-info">
                 Wysłano pomyślnie!
+                {playSound()}
                 <AiOutlineClose
-                  class="close-success-info"
+                  className="close-success-info"
                   onClick={closeBtnHandler}
                 />
               </div>

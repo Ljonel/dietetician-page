@@ -46,7 +46,7 @@ const IntroductionSection = () => {
             pasją do aktywności fizycznej zapragnęłam dzielić się z Wami. <br />
             Miło mi Cię poznać!
           </motion.h5>
-          <Link to="/about">
+          <Link to="/o-mnie">
             <motion.button
               animate={controls}
               variants={fromDown}

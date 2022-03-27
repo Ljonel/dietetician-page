@@ -40,7 +40,7 @@ const IntroductionSection = () => {
             studia wyższe na Śląskiej Wyższej Szkole Medycznej w Katowicach.
             Uwielbiam gotować, a w kuchni często eksperymentuję.
           </motion.h5>
-          <Link to="/about">
+          <Link to="/o-mnie">
             <motion.button
               animate={controls}
               variants={fromDown}

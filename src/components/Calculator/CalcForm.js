@@ -17,13 +17,19 @@ const CalcForm = ({ setPPM, ppm }) => {
 
     if (values.sex === "kobieta") {
       ppm = Math.floor(
-        665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
+        655.1 +
+          9.563 * values.weight +
+          1.85 * values.height -
+          4.676 * values.age
       );
       localStorage.setItem("ppm", ppm);
       setPPM(ppm);
     } else {
       ppm = Math.floor(
-        665.09 + 9.56 * values.weight + 1.85 * values.height - 4.67 * values.age
+        66.5 +
+          13.75 * values.weight +
+          5.003 * values.height -
+          6.775 * values.age
       );
       localStorage.setItem("ppm", ppm);
       setPPM(ppm);
@@ -87,11 +93,11 @@ const CalcForm = ({ setPPM, ppm }) => {
                   <div className="input-underline"></div>
                 </div>
                 <div className="row-element">
-                  <label htmlFor="weight">Waga [kg]</label>
+                  <label htmlFor="weight">Aktualna masa ciała [kg]</label>
                   <Field
                     id="weight"
                     name="weight"
-                    placeholder="Waga"
+                    placeholder="Aktualna masa ciała"
                     type="number"
                     required
                     min="10"

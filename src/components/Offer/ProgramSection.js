@@ -32,7 +32,7 @@ const ProgramSection = () => {
               variants={reveal}
               transition={{ delay: 0.1, type: "tween" }}
             >
-              Jadłospis na 7 – dni Lista zakupów
+              Jadłospis na 7 dni
             </motion.li>
             <motion.li
               animate={controls}
@@ -54,6 +54,13 @@ const ProgramSection = () => {
               transition={{ delay: 0.4, type: "tween" }}
             >
               Raport z pierwszej wizyty
+            </motion.li>
+            <motion.li
+              animate={controls}
+              variants={reveal}
+              transition={{ delay: 0.5, type: "tween" }}
+            >
+              Lista zakupów
             </motion.li>
           </ul>
           <motion.p
