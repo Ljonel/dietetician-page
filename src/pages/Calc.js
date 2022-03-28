@@ -18,9 +18,9 @@ const Calc = () => {
           <div className="ppm-content">
             <FaCalculator className="ppm-icon" />
             <p>
-              Podstawowa Przemiana Materii (PPM) to ilość kalorii, jaką
+              Podstawowa Przemiana Materii (PPM) to ilość kalorii jaką
               potrzebuje Twój organizm aby podtrzymać podstawowe funkcje życiowe
-              tj. praca narządów. Jest to dolna granica kaloryczności diety
+              tj. praca narządów. Jest to dolna granica kaloryczności diety,
               poniżej której nie należy schodzić.
             </p>
             <div className="ppm-value">
@@ -32,8 +32,8 @@ const Calc = () => {
             <p>
               Aby obliczyć Twoją Całkowitą Przemianę Materii (CPM) należy
               uwzględnić dzienną aktywność fizyczną. Ważne jest aby do Twojego
-              PPM doliczyć aktywność zawodową, treningową i pozatreningową.
-              Zróbmy to razem na{" "}
+              PPM dodać aktywność zawodową, treningową i pozatreningową. Zróbmy
+              to razem na{" "}
               <Link to="/oferta" style={{ color: "#f06f33" }}>
                 wspólnej konsultacji
               </Link>

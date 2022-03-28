@@ -25,7 +25,7 @@ const ConsultationSection = () => {
   return (
     <>
       <section id="consultation" ref={element}>
-        <Title word={"Oferta"} />
+        {/* <Title word={"Oferta"} /> */}
         <div className="consultation-wrapper">
           <div className="consultation-text">
             <div className="consultation-content">

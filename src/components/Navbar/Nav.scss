@@ -79,26 +79,30 @@ nav {
     &:after {
       content: "";
       position: absolute;
-      height: 4px;
+      height: 3px;
       width: 0;
       left: 0;
-      bottom: 0;
+      bottom: -3px;
       background-color: #d4b895;
       transition: 0.3s;
     }
   }
 }
-
+.actuall-page {
+  border-bottom: 3px solid #d4b895;
+}
 .sidebar {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 100vh;
   left: -100%;
-  top: 100px;
+  top: 0;
   background: #d4b895;
-  z-index: 999;
+  z-index: 900;
   transition: 0.3s;
   overflow-y: hidden;
   position: fixed;
+  display: flex;
+  align-items: center;
 
   a {
     text-decoration: none;
@@ -109,21 +113,43 @@ nav {
 .sidebar-menu {
   list-style: none;
   width: 100%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 25px;
-  align-items: center;
+  padding: 30px;
 
   .sidebar-text {
     display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 10px;
-    border-radius: 10px;
-    transition: 0.3s;
     width: 100%;
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        rgba(214, 196, 173, 0.5) 0%,
+        rgba(212, 184, 149, 0.5) 20%,
+        rgba(119, 88, 49, 0.5) 100%
+      )
+      left bottom no-repeat;
+    background-size: 100% 2px;
+
+    .sidebar-underline {
+      width: 0%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+      z-index: 999;
+      background: rgb(214, 196, 173);
+      background: linear-gradient(
+        90deg,
+        rgba(214, 196, 173, 1) 0%,
+        rgba(212, 184, 149, 1) 20%,
+        rgba(119, 88, 49, 1) 100%
+      );
+    }
 
     .sidebar-icons {
       margin-right: 20px;
@@ -133,12 +159,15 @@ nav {
       width: 100%;
       align-items: center;
       height: 100%;
-      text-align: center;
+      text-align: right;
+      color: rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+      &:hover {
+        color: #000;
+      }
     }
-
-    &:hover {
-      background-color: #94662e;
-      color: white;
+    &:hover .sidebar-underline {
+      width: 100%;
     }
   }
 }
@@ -222,9 +251,15 @@ nav {
     padding: 0;
   }
 
-  .sidebar-menu {
-    li {
-      width: 100%;
+  .sidebar {
+    width: 60%;
+    .sidebar-menu {
+      .sidebar-text {
+        font-size: 18px;
+      }
+      li {
+        width: 100%;
+      }
     }
   }
 }

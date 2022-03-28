@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { VscMenu } from "react-icons/vsc";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
-import Sidebar from "../Sidebar/Sidebar";
+import Links from "./Links.js";
 
 import "./Nav.scss";
 const Nav = () => {
   const [showBurger, setShowBurger] = useState(true);
   const [showSidebar, setShowSidebar] = useState(false);
-
+  const actuallLocation = window.location.pathname;
   const burgerClick = () => {
     setShowSidebar(!showSidebar);
   };
@@ -44,31 +45,18 @@ const Nav = () => {
         <div className="navigation">
           {showBurger ? (
             <ul>
-              <li>
-                <Link to="/" className="navigation-link">
-                  Strona główna
+              {Links.map((item) => (
+                <Link
+                  to={item.path}
+                  className={
+                    actuallLocation === item.path
+                      ? "navigation-link actuall-page"
+                      : "navigation-link"
+                  }
+                >
+                  {item.title}
                 </Link>
-              </li>
-              <li>
-                <Link to="/o-mnie" className="navigation-link">
-                  O mnie
-                </Link>
-              </li>
-              <li>
-                <Link to="/oferta" className="navigation-link">
-                  Oferta
-                </Link>
-              </li>
-              <li>
-                <Link to="/kalkulator" className="navigation-link">
-                  Kalkulator kolorii
-                </Link>
-              </li>
-              <li>
-                <Link to="/kontakt" className="navigation-link">
-                  Kontakt
-                </Link>
-              </li>
+              ))}
             </ul>
           ) : (
             <>
@@ -83,16 +71,25 @@ const Nav = () => {
       </nav>
       <div className={showSidebar ? "sidebar active" : "sidebar"}>
         <ul className="sidebar-menu">
-          {Sidebar.map((item, index) => (
-            <li key={index} className={item.cname}>
+          {Links.map((item, index) => (
+            <li key={index} className="sidebar-text">
               <Link to={item.path}>
-                {item.icon}
+                {/* {item.icon} */}
                 {item.title}
               </Link>
+              <div
+                className="sidebar-underline"
+                style={
+                  actuallLocation === item.path
+                    ? { width: "100%", height: "3px" }
+                    : {}
+                }
+              ></div>
             </li>
           ))}
         </ul>
-        <div className="sidebar-socials">
+
+        {/* <div className="sidebar-socials">
           <ul>
             <li className="sidebar-socials">
               <a href="www.youtube.com">
@@ -106,7 +103,7 @@ const Nav = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </>
   );
