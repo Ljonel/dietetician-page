@@ -4,6 +4,8 @@ import { Formik, Field, Form } from "formik";
 import emailjs from "emailjs-com";
 import { AiOutlineClose } from "react-icons/ai";
 import audio from "../../assets/whoosh.mp3";
+import { HiOutlineMail } from "react-icons/hi";
+import { BsFacebook, BsInstagram } from "react-icons/bs";
 
 const ContactForm = () => {
   const form = useRef();
@@ -40,6 +42,7 @@ const ContactForm = () => {
   return (
     <section id="contactForm">
       <Title word="Kontakt" />
+
       <Formik
         initialValues={{
           firstName: "",
@@ -114,6 +117,31 @@ const ContactForm = () => {
           </div>
         </Form>
       </Formik>
+
+      {/* <div className="contact-datas">
+        <div className="contact-container">
+          <div className="contact-email">
+            <HiOutlineMail className="contact-icon" />
+            <div className="contact-element">
+              <h3>email</h3>
+              <p>stopkadietetyk@gmail.com</p>
+            </div>
+          </div>
+
+          <div className="contact-social">
+            <BsFacebook className="contact-icon" />
+            <div className="contact-element">
+              <h3>Facebook</h3>
+            </div>
+          </div>
+          <div className="contact-social">
+            <BsInstagram className="contact-icon" />
+            <div className="contact-element">
+              <h3>Instagram</h3>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </section>
   );
 };

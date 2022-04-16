@@ -11,7 +11,7 @@ import {
   fromUp,
 } from "../Animation";
 import { useScroll } from "../useScroll";
-import { ReactComponent as PersonalTrainer } from "../personal-trainer.svg";
+import { ReactComponent as PersonalTrainer } from "../../assets/personal-trainer.svg";
 import { IoBarbell } from "react-icons/io5";
 
 import "../../pages/Home.scss";
@@ -69,7 +69,7 @@ const IntroductionSection = () => {
             animate={controls}
             variants={imageAnimation}
             transition={{ delay: 0.3, type: "tween" }}
-            src="gym3.jpg"
+            src="/img/static/gym3.jpg"
             alt=""
           />
         </div>

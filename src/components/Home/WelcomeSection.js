@@ -11,12 +11,14 @@ import {
 import { useScroll } from "../useScroll";
 import { IoIosArrowDown } from "react-icons/io";
 import "../../pages/Home.scss";
+import { ReactComponent as Welcome } from "../../assets/welcome.svg";
 const WelcomeSection = () => {
   const [element, controls] = useScroll();
   return (
     <>
       <section id="welcome" ref={element}>
         <div className="welcome-text-wrapper">
+          <Welcome className="svg-img" />
           <div className="welcome-text">
             <motion.h3
               variants={reveal}
@@ -59,7 +61,7 @@ const WelcomeSection = () => {
             transition={{ delay: 0.2, type: "tween" }}
           ></motion.div>
           <motion.img
-            src="welcome-img.jpg"
+            src="/img/static/1.jpg"
             alt=""
             variants={imageAnimation}
             animate={controls}

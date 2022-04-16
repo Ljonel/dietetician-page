@@ -21,7 +21,7 @@ export const certificates = [
   },
   {
     title: "SWSM Suplementy diety",
-    url: "./img/cert/0.jpg",
+    url: "./img/cert/cert_analiza.jpg",
   },
   {
     title: "A4 Dieta a problemy hormonalne",

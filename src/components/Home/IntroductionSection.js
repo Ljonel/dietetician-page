@@ -5,7 +5,7 @@ import { textAnimation, reveal, fromDown } from "../Animation";
 import { useScroll } from "../useScroll";
 import "../../pages/Home.scss";
 import { GiTreeBranch } from "react-icons/gi";
-import { ReactComponent as Icecream } from "../ice_cream.svg";
+import { ReactComponent as Icecream } from "../../assets/ice_cream.svg";
 
 const IntroductionSection = () => {
   const [element, controls] = useScroll();

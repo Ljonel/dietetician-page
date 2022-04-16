@@ -79,35 +79,6 @@
         }
       }
 
-      //   a {
-      //     width: 100%;
-      //     height: 100px;
-      //     display: flex;
-      //     text-decoration: none;
-      //     color: black;
-      //     justify-content: center;
-      //     align-items: center;
-      //     height: 50px;
-      //     .icon-wrapper {
-      //       width: 30%;
-      //       height: 100%;
-      //       height: 100%;
-      //       position: relative;
-      //       .downloadFile-icon {
-      //         transition: 0.3s;
-      //         font-size: 40px;
-      //         color: #f5e5d0;
-      //         position: absolute;
-      //         right: 10px;
-      //       }
-      //     }
-
-      //     p {
-      //       text-decoration: underline;
-      //       width: 70%;
-      //     }
-      //   }
-
       .consultation-content {
         width: 90%;
         display: flex;
@@ -193,7 +164,7 @@
   display: flex;
   .program-img {
     width: 50%;
-    background-image: url("../../public/dietetyk.png");
+    background-image: url("../../public/img/static/14.jpg");
     background-repeat: no-repeat;
     background-color: #f5e5d0;
     background-attachment: unset;
@@ -246,7 +217,7 @@
   width: 100%;
   height: 100vh;
   display: flex;
-
+  overflow-x: hidden;
   .training-text {
     width: 50%;
     height: 100%;
@@ -266,7 +237,8 @@
       font-size: 1.1rem;
       list-style: none;
       li {
-        margin: 10px;
+        margin: 15px 0;
+        text-align: left;
         &:before {
           background-color: #c49782;
           border-radius: 50%;
@@ -288,7 +260,7 @@
     width: 50%;
     height: 100%;
     overflow: hidden;
-    background-image: url("../../public/gym1.jpg");
+    background-image: url("../../public/img/static/gym1.jpg");
     background-repeat: no-repeat;
     background-color: #f5e5d0;
     background-attachment: unset;
@@ -444,7 +416,7 @@
             padding-left: 30px;
             display: flex;
             flex-direction: column;
-            font-size: 0.7rem;
+            // font-size: 0.7rem;
           }
         }
 

@@ -1,16 +1,12 @@
 import react from "react";
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import {
-  textAnimation,
-  imageAnimation,
-  box,
-  reveal,
-  revealReverse,
-  fromDown,
-  fromUp,
-} from "../Animation";
+import { motion } from "framer-motion";
+import { fromDown, fromUp } from "../Animation";
 import { useScroll } from "../useScroll";
 import { HashLink as Link } from "react-router-hash-link";
+import { FaAppleAlt } from "react-icons/fa";
+import { GiShinyApple } from "react-icons/gi";
+import { HiOutlineChatAlt2 } from "react-icons/hi";
+import { IoBarbell } from "react-icons/io5";
 
 import "../../pages/Home.scss";
 
@@ -19,14 +15,15 @@ const cards = [
     title: "Konsultacja Żywieniowa",
     text: "1 godz.",
     price: "120",
-    imgUrl: "gym1.jpg",
+    cardIcon: <HiOutlineChatAlt2 />,
     location: "/oferta#consultation",
     animate: fromDown,
   },
   {
     title: "Program odżywiania",
-    text: "ok. 35 przepisów",
+    text: "7 dni",
     price: "250",
+    cardIcon: <GiShinyApple />,
     imgUrl: "fruits.png",
     location: "/oferta#program",
     animate: fromUp,
@@ -35,9 +32,9 @@ const cards = [
     title: "Trening Personalny",
     text: "1 godz.",
     price: "90/130",
+    cardIcon: <IoBarbell />,
     imgUrl: "gym3.jpg",
     location: "/oferta#training",
-
     animate: fromDown,
   },
 ];
@@ -57,8 +54,7 @@ const CardsSection = () => {
           >
             <div className="card-title">
               <motion.div className="card-img" whileHover={{ scale: 1.2 }}>
-                {" "}
-                <motion.img src={card.imgUrl} alt="" />
+                {card.cardIcon}
               </motion.div>
               <motion.h3>{card.title}</motion.h3>
               <motion.span>{card.text}</motion.span>

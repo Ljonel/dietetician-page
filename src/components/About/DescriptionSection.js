@@ -20,7 +20,7 @@ const DescriptionSection = () => {
             animate={controls}
             variants={imageAnimation}
             transition={{ delay: 0.2, type: "tween" }}
-            src="welcome-img.jpg"
+            src="/img/static/13.jpg"
             alt=""
           />
         </div>

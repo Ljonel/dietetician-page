@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams, useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { VscMenu } from "react-icons/vsc";
-import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import Links from "./Links.js";
 
@@ -33,13 +31,13 @@ const Nav = () => {
       <nav>
         <div className="logo">
           {showBurger ? (
-            <Link to="/" className="logo-text">
-              Joanna Stopka
-            </Link>
+            <div className="logo-text">
+              <Link to="/">Joanna Stopka</Link>
+            </div>
           ) : (
-            <Link to="/" className="logo-text">
-              JS
-            </Link>
+            <div className="logo-text">
+              <Link to="/">JS</Link>
+            </div>
           )}
         </div>
         <div className="navigation">

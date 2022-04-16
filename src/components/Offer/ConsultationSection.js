@@ -13,14 +13,6 @@ const variants = {
 
 const ConsultationSection = () => {
   const [element, controls] = useScroll();
-  const [isSuccess, setIsSucces] = useState(false);
-
-  const fileClickHandler = (e) => {
-    console.log(isSuccess);
-    e.preventDefault();
-    if (isSuccess) {
-    } else setIsSucces(!isSuccess);
-  };
 
   return (
     <>
@@ -36,6 +28,15 @@ const ConsultationSection = () => {
               >
                 Konsultacja żywieniowa
               </motion.h1>
+              <motion.p
+                animate={controls}
+                variants={reveal}
+                transition={{ delay: 0.2, type: "tween" }}
+                style={{ textAlign: "center", fontWeight: "bold" }}
+              >
+                250zł
+              </motion.p>
+
               <ul>
                 <motion.li
                   animate={controls}
@@ -76,19 +77,20 @@ const ConsultationSection = () => {
               Konsultacja Żywieniowa może być również przeprowadzona online{" "}
             </motion.h3>
             <div className="consultation-visit">
+              {/* <motion.p
+                animate={controls}
+                variants={reveal}
+                transition={{ delay: 0.1, type: "tween" }}
+              >
+                <b>Jak prawidłowo przygotować się do pierwszej wizyty?</b>
+              </motion.p> */}
               <motion.p
                 animate={controls}
                 variants={reveal}
                 transition={{ delay: 0.1, type: "tween" }}
               >
                 <b>Jak prawidłowo przygotować się do pierwszej wizyty?</b>
-              </motion.p>
-              <motion.p
-                animate={controls}
-                variants={reveal}
-                transition={{ delay: 0.1, type: "tween" }}
-              >
-                {" "}
+                <br />
                 Zabierz ze sobą aktualne wyniki podstawowych badań krwi
                 (morfologia, lipidogram, TSH, FT3, FT4, AlAT, AspAT, glukoza)
                 oraz wypełniony dzienniczek żywieniowy uwzględniający wszystkie
@@ -96,33 +98,6 @@ const ConsultationSection = () => {
                 wizytę.
               </motion.p>
             </div>
-            {/* <motion.a
-              href="#"
-              onClick={fileClickHandler}
-              animate={controls}
-              variants={fromDown}
-              transition={{ delay: 0.1, type: "tween" }}
-            >
-              <motion.div className="icon-wrapper">
-                <motion.div
-                  className="downloadFile-icon"
-                  animate={isSuccess ? "closed" : "open"}
-                  variants={variants}
-                >
-                  <BsFillFileArrowDownFill />
-                </motion.div>
-                <motion.div
-                  className="downloadFile-icon"
-                  animate={isSuccess ? "open" : "closed"}
-                  variants={variants}
-                  style={{ color: "#ec9c76" }}
-                  transition={isSuccess ? { delay: 1 } : { delay: 0 }}
-                >
-                  <BsFillFileCheckFill />
-                </motion.div>
-              </motion.div>
-              <p>Pobierz dziennieczek żywieniowy</p>
-            </motion.a> */}
 
             <motion.p
               animate={controls}
@@ -156,7 +131,7 @@ const ConsultationSection = () => {
               animate={controls}
               variants={imageAnimation}
               transition={{ delay: 0.4, type: "tween" }}
-              src="dietetyk.png"
+              src="/img/static/10.jpg"
               alt=""
             />
           </div>

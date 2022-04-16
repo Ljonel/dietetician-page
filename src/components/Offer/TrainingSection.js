@@ -12,6 +12,19 @@ const TrainingSection = () => {
       <section id={"training"} ref={element}>
         <div className="training-text">
           <h1>Trening personalny</h1>
+          <motion.p
+            animate={controls}
+            variants={reveal}
+            transition={{ delay: 0.2, type: "tween" }}
+            style={{
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "20px",
+              margin: "0",
+            }}
+          >
+            100zł
+          </motion.p>
           <ul>
             <motion.li
               animate={controls}

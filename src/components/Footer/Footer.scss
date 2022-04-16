@@ -2,7 +2,8 @@
   width: 100vw;
   height: 40vh;
   // background-color: #c49782;
-  background-color: rgb(189, 131, 100, 0.7);
+  // background-color: rgb(189, 131, 100, 0.7);
+  background-color: #a3806d;
   display: flex;
   color: #faf7f5;
   padding-top: 15px;
@@ -50,7 +51,7 @@
         text-decoration: none;
 
         &:hover {
-          color: #bd8364;
+          color: #f6ece3;
         }
       }
     }
@@ -74,7 +75,7 @@
         transition: 0.3s;
 
         &:hover {
-          color: #bd8364;
+          color: #d4b895;
         }
       }
     }

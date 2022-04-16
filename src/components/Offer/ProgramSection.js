@@ -21,11 +21,25 @@ const ProgramSection = () => {
           <motion.h1
             animate={controls}
             variants={reveal}
-            transition={{ delay: 0.1, type: "tween" }}
+            transition={{ delay: 0.2, type: "tween" }}
           >
             {" "}
             Spersonalizowany program odżywiania
           </motion.h1>
+          <motion.p
+            animate={controls}
+            variants={reveal}
+            transition={{ delay: 0.1, type: "tween" }}
+            style={{
+              textAlign: "center",
+              fontWeight: "bold",
+              fontSize: "20px",
+              margin: "0",
+            }}
+          >
+            120zł
+          </motion.p>
+
           <ul>
             <motion.li
               animate={controls}
