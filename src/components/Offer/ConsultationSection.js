@@ -6,11 +6,6 @@ import "../../pages/Offer.scss";
 import Title from "../Title";
 import { BsFillFileArrowDownFill, BsFillFileCheckFill } from "react-icons/bs";
 
-const variants = {
-  open: { opacity: 1, scale: 1.2, x: 1 },
-  closed: { opacity: 0, scale: 1, x: 1 },
-};
-
 const ConsultationSection = () => {
   const [element, controls] = useScroll();
 
@@ -77,13 +72,6 @@ const ConsultationSection = () => {
               Konsultacja Żywieniowa może być również przeprowadzona online{" "}
             </motion.h3>
             <div className="consultation-visit">
-              {/* <motion.p
-                animate={controls}
-                variants={reveal}
-                transition={{ delay: 0.1, type: "tween" }}
-              >
-                <b>Jak prawidłowo przygotować się do pierwszej wizyty?</b>
-              </motion.p> */}
               <motion.p
                 animate={controls}
                 variants={reveal}

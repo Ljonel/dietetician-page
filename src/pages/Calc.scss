@@ -1,12 +1,13 @@
 #calcForm {
   width: 100%;
   height: 100vh;
+  min-height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
-  margin-top: 100px;
+  margin-top: 70px;
   .title-wrapper {
     width: 100%;
     display: flex;
@@ -120,6 +121,7 @@
 #ppm-result {
   width: 100%;
   height: 50vh;
+  min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;

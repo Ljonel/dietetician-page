@@ -12,6 +12,7 @@ import { useScroll } from "../useScroll";
 import { IoIosArrowDown } from "react-icons/io";
 import "../../pages/Home.scss";
 import { ReactComponent as Welcome } from "../../assets/welcome.svg";
+import { useInView } from "react-intersection-observer";
 const WelcomeSection = () => {
   const [element, controls] = useScroll();
 

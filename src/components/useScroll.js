@@ -8,17 +8,11 @@ export const useScroll = (thresh = 0.2) => {
     threshold: thresh,
   });
 
-  useEffect(() => {
-    if (view) {
-      controls.start("visible");
-    }
-  }, [controls, view]);
-
-  // if (view) {
-  //   controls.start("show");
-  // } else {
-  //   controls.start("hidden");
-  // }
+  if (view) {
+    controls.start("show");
+  } else {
+    controls.start("hidden");
+  }
 
   return [element, controls];
 };
