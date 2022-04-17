@@ -37,7 +37,7 @@ const ProgramSection = () => {
               margin: "0",
             }}
           >
-            120zł
+            250zł
           </motion.p>
 
           <ul>

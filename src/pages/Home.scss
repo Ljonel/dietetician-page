@@ -28,7 +28,7 @@ p {
   height: calc(100vh + 100px);
   display: flex;
   color: #272725;
-
+  overflow-x: hidden;
   .welcome-text-wrapper {
     width: 50%;
     height: 100%;

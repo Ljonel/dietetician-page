@@ -34,7 +34,7 @@ const ConsultationSection = () => {
                 transition={{ delay: 0.2, type: "tween" }}
                 style={{ textAlign: "center", fontWeight: "bold" }}
               >
-                250zł
+                120zł
               </motion.p>
 
               <ul>
