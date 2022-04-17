@@ -13,6 +13,7 @@ const IntroductionSection = () => {
     <>
       <section id="introduction" ref={element}>
         <div className="introduction-img">
+          <div className="introduction-element"></div>
           {/* <img src="welcome-img.jpg" alt="" /> */}
         </div>
         <div className="introduction-text">

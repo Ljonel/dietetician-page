@@ -1,6 +1,6 @@
-import react from "react";
+import react, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import {
   imageAnimation,
   box,
@@ -14,6 +14,7 @@ import "../../pages/Home.scss";
 import { ReactComponent as Welcome } from "../../assets/welcome.svg";
 const WelcomeSection = () => {
   const [element, controls] = useScroll();
+
   return (
     <>
       <section id="welcome" ref={element}>

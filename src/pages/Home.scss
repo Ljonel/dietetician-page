@@ -26,12 +26,14 @@ p {
 #welcome {
   width: 100%;
   height: calc(100vh + 100px);
+  min-height: 1000px;
   display: flex;
   color: #272725;
   overflow-x: hidden;
+  overflow: hidden;
   .welcome-text-wrapper {
     width: 50%;
-    height: 100%;
+    // height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,16 +108,25 @@ p {
 #introduction {
   width: 100%;
   height: 100vh;
+  min-height: 1000px;
   display: flex;
 
   .introduction-img {
-    background-image: url("../../public/img/static/16.jpg");
     width: 50%;
-    max-height: 100%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 50px;
+    // background-image: url("../../public/img/static/16.jpg");
+    // min-width: 50%;
+    // min-height: 100%;
+    // background-attachment: fixed;
+    // background-repeat: no-repeat;
+    // // background-size: contain;
+    // background-size: contain;
+    // background-position: 0 50px;
+    .introduction-element {
+      width: 100%;
+      height: 100%;
+      background-image: url("../../public/img/static/16.jpg");
+      background-size: cover;
+    }
   }
 
   .introduction-text {
@@ -197,6 +208,7 @@ p {
 #training {
   width: 100%;
   height: 100vh;
+  min-height: 1000px;
   display: flex;
 
   .training-text {
@@ -448,6 +460,7 @@ p {
   width: 100%;
   align-items: center;
   height: 30vh;
+  min-height: 300px;
   font-size: 40px;
   border-top: 10px solid #93644b;
   border-bottom: 10px solid #93644b;
@@ -640,9 +653,11 @@ p {
 
     .introduction-img {
       width: 100%;
-      height: 0%;
-      background-image: none;
-      background: red;
+      .introduction-element {
+        height: 0%;
+        background-image: none;
+        background: red;
+      }
     }
 
     .introduction-text {
@@ -691,6 +706,23 @@ p {
       height: 100%;
       .svg-img {
         max-width: 100%;
+      }
+    }
+  }
+  #gauge {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+
+    h3 {
+      font-size: 10px;
+    }
+
+    .gauge-el {
+      width: 100%;
+
+      span {
+        font-size: 45px;
       }
     }
   }
@@ -751,24 +783,6 @@ p {
       max-width: 300px;
       height: 450px;
       flex: 1 0 40%;
-    }
-  }
-
-  #gauge {
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-
-    h3 {
-      font-size: 10px;
-    }
-
-    .gauge-el {
-      width: 100%;
-
-      span {
-        font-size: 45px;
-      }
     }
   }
 }

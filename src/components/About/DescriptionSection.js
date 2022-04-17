@@ -1,11 +1,13 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
 import { useScroll } from "../useScroll";
 import { imageAnimation, reveal, revealReverse, fromDown } from "../Animation";
 import Title from "../Title";
 import "../../pages/About.scss";
+import { useInView } from "react-intersection-observer";
 const DescriptionSection = () => {
   const [element, controls] = useScroll();
+
   return (
     <>
       <section id="about-desc" ref={element}>
