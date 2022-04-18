@@ -12,6 +12,10 @@ const Nav = () => {
   const burgerClick = () => {
     setShowSidebar(!showSidebar);
   };
+
+  useEffect(() => {
+    checkWindowSize();
+  }, []);
   const checkWindowSize = () => {
     if (window.innerWidth <= 760) {
       setShowBurger(false);
